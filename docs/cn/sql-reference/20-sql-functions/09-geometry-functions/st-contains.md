@@ -5,7 +5,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新: v1.2.564"/>
 
-如果第二个 GEOMETRY 对象完全位于第一个 GEOMETRY 对象内部，则返回 TRUE。
+如果第二个GEOMETRY对象完全在第一个GEOMETRY对象内部，则返回TRUE。
 
 ## 语法
 
@@ -17,16 +17,16 @@ ST_CONTAINS(<geometry1>, <geometry2>)
 
 | 参数          | 描述                                                                                          |
 |---------------|-----------------------------------------------------------------------------------------------|
-| `<geometry1>` | 参数必须是类型为 GEOMETRY 对象的表达式，且不能是 GeometryCollection。                          |
-| `<geometry2>` | 参数必须是类型为 GEOMETRY 对象的表达式，且不能是 GeometryCollection。                          |
+| `<geometry1>` | 参数必须是类型为GEOMETRY对象的表达式，且不能是GeometryCollection。                             |
+| `<geometry2>` | 参数必须是类型为GEOMETRY对象的表达式，且不能是GeometryCollection。                             |
 
 :::note
-- 如果两个输入的 GEOMETRY 对象具有不同的 SRID，函数会报告错误。
+- 如果两个输入的GEOMETRY对象具有不同的SRID，函数会报告错误。
 :::
 
 ## 返回类型
 
-布尔型。
+布尔值。
 
 ## 示例
 

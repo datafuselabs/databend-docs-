@@ -5,13 +5,13 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新: v1.2.442"/>
 
-返回几何对象的维度。几何对象的维度如下：
+返回几何对象的维度。GEOMETRY对象的维度为：
 
-| 地理空间对象类型           | 维度  |
-|----------------------------|-------|
-| 点 / 多点                 | 0     |
-| 线串 / 多线串             | 1     |
-| 多边形 / 多多边形         | 2     |
+| 地理空间对象类型             | 维度       |
+|------------------------------|------------|
+| Point / MultiPoint           | 0          |
+| LineString / MultiLineString | 1          |
+| Polygon / MultiPolygon       | 2          |
 
 ## 语法
 
@@ -21,9 +21,9 @@ ST_DIMENSION(<geometry>)
 
 ## 参数
 
-| 参数         | 描述                                           |
-|--------------|------------------------------------------------|
-| `<geometry>` | 参数必须是 GEOMETRY 类型的表达式。             |
+| 参数         | 描述                                               |
+|--------------|------------------------------------------------------|
+| `<geometry>` | 参数必须是GEOMETRY类型的表达式。 |
 
 ## 返回类型
 

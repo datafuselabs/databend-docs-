@@ -5,7 +5,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新: v1.2.413"/>
 
-返回一个表示 [geohash](https://en.wikipedia.org/wiki/Geohash) 中心点的 GEOMETRY 对象。
+返回表示 [geohash](https://en.wikipedia.org/wiki/Geohash) 中心点的 GEOMETRY 对象。
 
 ## 语法
 
@@ -17,7 +17,7 @@ ST_GEOMPOINTFROMGEOHASH(<geohash>)
 
 | 参数        | 描述                     |
 |-------------|--------------------------|
-| `<geohash>` | 参数必须是一个 geohash。|
+| `<geohash>` | 参数必须是一个 geohash。 |
 
 ## 返回类型
 

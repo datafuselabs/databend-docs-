@@ -5,7 +5,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新: v1.2.487"/>
 
-列出明确授予用户、角色或特定对象的权限。
+列出显式授予用户、角色或特定对象的权限。
 
 另请参阅: [SHOW GRANTS](/sql/sql-commands/ddl/user/show-grants)
 
@@ -31,13 +31,13 @@ CREATE USER 'user1' IDENTIFIED BY 'password';
 -- 创建新角色
 CREATE ROLE analyst;
 
--- 将 analyst 角色授予用户
+-- 将角色授予用户
 GRANT ROLE analyst TO 'user1';
 
--- 创建 stage
+-- 创建Stage
 CREATE STAGE my_stage;
 
--- 将 stage 上的权限授予角色
+-- 将Stage的权限授予角色
 GRANT READ ON STAGE my_stage TO ROLE analyst;
 
 -- 列出授予用户的权限
@@ -58,7 +58,7 @@ SELECT * FROM SHOW_GRANTS('role', 'analyst');
 │ Read       │ my_stage    │             NULL │ ROLE     │ analyst │ GRANT Read ON STAGE my_stage TO ROLE `analyst` │
 └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 
--- 列出授予 stage 的权限
+-- 列出授予Stage的权限
 SELECT * FROM SHOW_GRANTS('stage', 'my_stage');
 
 ┌─────────────────────────────────────────────────────────────────────────────────────┐

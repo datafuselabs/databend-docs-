@@ -1,5 +1,5 @@
 ---
-title: 减去时间间隔
+title: SUBTRACT TIME INTERVAL
 description: 减去时间间隔函数
 title_includes: subtract_years, subtract_quarters, subtract_months, subtract_days, subtract_hours, subtract_minutes, subtract_seconds
 ---

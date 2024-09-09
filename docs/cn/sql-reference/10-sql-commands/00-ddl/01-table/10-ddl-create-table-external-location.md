@@ -1,5 +1,5 @@
 ---
-title: CREATE TABLE(外部位置)
+title: CREATE TABLE(external-location)
 sidebar_position: 2
 ---
 
@@ -60,7 +60,7 @@ CONNECTION = (
 **可写访问：**
 - `s3:PutObject`：允许将对象写入存储桶。
 - `s3:DeleteObject`：允许从存储桶中删除对象。
-- `s3:AbortMultipartUpload`：允许中止分段上传。
+- `s3:AbortMultipartUpload`：允许中止多部分上传。
 - `s3:DeleteObjectVersion`：允许删除对象的特定版本。
 :::
 
@@ -106,7 +106,7 @@ LOCATION = 's3 | bucket=testbucket,root=/admin/data/,endpoint=https://s3.amazona
 
 或者，您可以创建一个连接并使用它来创建表：
 ```sql
--- 创建一个名为 `s3_connection` 的连接，用于 S3 凭据
+-- 为 S3 凭据创建一个名为 `s3_connection` 的连接
 CREATE CONNECTION s3_connection
   STORAGE_TYPE = 's3'
   SECRET_ACCESS_KEY = '<your-secret-access-key>'

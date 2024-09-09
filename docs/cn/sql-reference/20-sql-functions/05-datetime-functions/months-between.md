@@ -56,7 +56,7 @@ MONTHS_BETWEEN( <date1>, <date2> )
     months_between('2024-08-05'::date, '2024-01-01'::date): 7.129032258064516
     ```
 
-- 如果 *date1* 和 *date2* 是相同的日期，函数忽略任何时间部分并返回0。
+- 如果 *date1* 和 *date2* 是同一天，函数忽略任何时间部分并返回0。
 
     ```sql title='示例:'
     SELECT

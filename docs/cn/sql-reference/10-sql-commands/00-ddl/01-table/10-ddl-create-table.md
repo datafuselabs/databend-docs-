@@ -19,11 +19,11 @@ import EEFeature from '@site/src/components/EEFeature';
 
 Databend旨在通过设计变得易于使用，并且在创建表时不需要任何这些操作。此外，CREATE TABLE语句提供了这些选项，使您在各种场景下创建表变得更加容易：
 
-- [CREATE TABLE](#create-table): 从头开始创建一个表。
+- [CREATE TABLE](#create-table): 从头开始创建表。
 - [CREATE TABLE ... LIKE](#create-table--like): 创建一个与现有表具有相同列定义的表。
 - [CREATE TABLE ... AS](#create-table--as): 创建一个表并使用SELECT查询的结果插入数据。
-- [CREATE TRANSIENT TABLE](#create-transient-table): 创建一个不存储历史数据以进行时间回溯的表。
-- [CREATE TABLE ... EXTERNAL_LOCATION](#create-table--external-location): 创建一个表并指定一个S3桶用于数据存储，而不是FUSE引擎。
+- [CREATE TRANSIENT TABLE](#create-transient-table): 创建一个不存储其历史数据以进行时间回溯的表。
+- [CREATE TABLE ... EXTERNAL_LOCATION](#create-table--external_location): 创建一个表并指定一个S3桶用于数据存储，而不是FUSE引擎。
 
 ## CREATE TABLE
 
@@ -41,7 +41,7 @@ CREATE [ OR REPLACE ] [ TRANSIENT ] TABLE [ IF NOT EXISTS ] [ <database_name>. ]
 :::note
 - 有关Databend中可用的数据类型，请参阅[数据类型](../../../00-sql-reference/10-data-types/index.md)。
 
-- Databend建议在命名列时尽量避免使用特殊字符。然而，在某些情况下，如果需要使用特殊字符，别名应使用反引号括起来，例如：CREATE TABLE price(\`$CA\` int);
+- Databend建议在命名列时尽量避免使用特殊字符。然而，在某些情况下如果需要特殊字符，别名应使用反引号括起来，例如：CREATE TABLE price(\`$CA\` int);
 
 - Databend会自动将列名转换为小写。例如，如果您将列命名为*Total*，它将在结果中显示为*total*。
 :::
@@ -49,7 +49,7 @@ CREATE [ OR REPLACE ] [ TRANSIENT ] TABLE [ IF NOT EXISTS ] [ <database_name>. ]
 
 ## CREATE TABLE ... LIKE
 
-创建一个与现有表具有相同列定义的表。现有表的列名、数据类型及其非空约束将被复制到新表中。
+创建一个与现有表具有相同列定义的表。现有表的列名、数据类型及其非NULL约束将被复制到新表中。
 
 语法:
 ```sql
@@ -57,10 +57,10 @@ CREATE TABLE [IF NOT EXISTS] [db.]table_name
 LIKE [db.]origin_table_name
 ```
 
-此命令不包括原始表中的任何数据或属性（如`CLUSTER BY`、`TRANSIENT`和`COMPRESSION`），而是使用默认的系统设置创建一个新表。
+此命令不包括原始表中的任何数据或属性（如`CLUSTER BY`、`TRANSIENT`和`COMPRESSION`），而是使用默认系统设置创建一个新表。
 
 :::note 解决方法
-- 在使用此命令创建新表时，可以显式指定`TRANSIENT`和`COMPRESSION`。例如，
+- 当您使用此命令创建新表时，可以显式指定`TRANSIENT`和`COMPRESSION`。例如，
 
 ```sql
 create transient table t_new like t_old;
@@ -79,10 +79,10 @@ CREATE TABLE [IF NOT EXISTS] [db.]table_name
 AS SELECT query
 ```
 
-此命令不包括原始表中的任何属性（如CLUSTER BY、TRANSIENT和COMPRESSION），而是使用默认的系统设置创建一个新表。
+此命令不包括原始表中的任何属性（如CLUSTER BY、TRANSIENT和COMPRESSION），而是使用默认系统设置创建一个新表。
 
 :::note 解决方法
-- 在使用此命令创建新表时，可以显式指定`TRANSIENT`和`COMPRESSION`。例如，
+- 当您使用此命令创建新表时，可以显式指定`TRANSIENT`和`COMPRESSION`。例如，
 
 ```sql
 create transient table t_new as select * from t_old;
@@ -159,7 +159,7 @@ SELECT * FROM t_default_value;
 
 ## 计算列
 
-计算列是从表中的其他列使用标量表达式生成的列。当用于计算的任何列中的数据更新时，计算列将自动重新计算其值以反映更新。
+计算列是使用表中其他列的标量表达式生成的列。当计算中使用的任何列中的数据更新时，计算列将自动重新计算其值以反映更新。
 
 Databend支持两种类型的计算列：存储和虚拟。存储计算列在数据库中物理存储，并占用存储空间，而虚拟计算列不物理存储，其值在访问时动态计算。
 
@@ -206,11 +206,7 @@ CREATE TABLE IF NOT EXISTS employees (
 :::tip 存储还是虚拟？
 在选择存储计算列和虚拟计算列时，请考虑以下因素：
 
-- 存储空间：存储计算列占用表中的额外存储空间，因为它们的计算值是物理存储的。如果您有有限的存储空间或希望最小化存储使用，虚拟计算列可能是一个更好的选择。
-
-- 实时更新：存储计算列在依赖列更新时立即更新其计算值。这确保了在查询时始终拥有最新的计算值。虚拟计算列则在查询时动态计算其值，这可能会稍微增加处理时间。
-
-- 数据完整性和一致性：存储计算列在写操作时立即维护数据一致性，因为它们的计算值在写操作时更新。虚拟计算列则在查询时动态计算其值，这意味着在写操作和后续查询之间可能存在短暂的
+- 存储空间：存储计算列占用表中的额外存储空间，因为其计算值是物理存储的。如果您有有限的数
 
 -- 查询表以查看计算列
 SELECT id, price, quantity, total_price

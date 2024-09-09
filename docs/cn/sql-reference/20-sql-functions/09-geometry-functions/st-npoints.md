@@ -5,7 +5,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新: v1.2.566"/>
 
-返回一个 GEOMETRY 对象中的点数。
+返回一个GEOMETRY对象中的点数。
 
 ## 语法
 
@@ -19,9 +19,9 @@ ST_NPOINTS(<geometry>)
 
 ## 参数
 
-| 参数         | 描述                                                 |
+| 参数         | 描述                                                         |
 |--------------|-------------------------------------------------------------|
-| `<geometry>` | 参数必须是 GEOMETRY 对象类型的表达式。 |
+| `<geometry>` | 参数必须是GEOMETRY对象类型的表达式。                         |
 
 ## 返回类型
 

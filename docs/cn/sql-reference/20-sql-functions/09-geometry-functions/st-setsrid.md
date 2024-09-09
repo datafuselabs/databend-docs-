@@ -5,7 +5,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新: v1.2.566"/>
 
-返回一个GEOMETRY对象，其[SRID（空间参考系统标识符）](https://en.wikipedia.org/wiki/Spatial_reference_system#Identifier)设置为指定值。此函数仅更改SRID，而不影响对象的坐标。如果还需要将坐标更改为与新的SRS（空间参考系统）匹配，请改用[ST_TRANSFORM](st-transform.md)。
+返回一个GEOMETRY对象，其[SRID（空间参考系统标识符）](https://en.wikipedia.org/wiki/Spatial_reference_system#Identifier)设置为指定值。此函数仅更改SRID，而不影响对象的坐标。如果还需要将坐标更改为匹配新的SRS（空间参考系统），请改用[ST_TRANSFORM](st-transform.md)。
 
 ## 语法
 

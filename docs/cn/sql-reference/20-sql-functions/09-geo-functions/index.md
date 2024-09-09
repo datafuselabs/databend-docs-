@@ -2,7 +2,7 @@
 title: 地理函数
 ---
 
-本节提供 Databend 中地理函数的参考信息。
+本节提供了 Databend 中地理函数的参考信息。
 
 ## 坐标转换
 
@@ -24,7 +24,7 @@ title: 地理函数
 - [H3_GET_RESOLUTION](h3-get-resolution.md)
 - [H3_TO_CENTER_CHILD](h3-to-center-child.md)
 - [H3_TO_CHILDREN](h3-to-children.md)
-- [H3_TO_GEO_BOUNDARY](h3-to-geo-boundary.md)
+- [H3-TO-GEO-BOUNDARY](h3-to-geo-boundary.md)
 - [H3_TO_PARENT](h3-to-parent.md)
 - [H3_NUM_HEXAGONS](h3-num-hexagons.md)
 

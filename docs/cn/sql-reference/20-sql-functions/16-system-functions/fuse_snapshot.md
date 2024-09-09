@@ -2,7 +2,7 @@
 title: FUSE_SNAPSHOT
 ---
 
-返回表的快照信息。有关 Databend 中快照的更多信息，请参阅 [什么是快照、段和块？](../../10-sql-commands/00-ddl/01-table/60-optimize-table.md#what-are-snapshot-segment-and-block)。
+返回表的快照信息。有关Databend中快照的更多信息，请参阅[什么是快照、段和块？](../../10-sql-commands/00-ddl/01-table/60-optimize-table.md#what-are-snapshot-segment-and-block)。
 
 另请参阅：
 
@@ -12,7 +12,7 @@ title: FUSE_SNAPSHOT
 ## 语法
 
 ```sql
-FUSE_SNAPSHOT('<数据库名称>', '<表名称>')
+FUSE_SNAPSHOT('<database_name>', '<table_name>')
 ```
 
 ## 示例

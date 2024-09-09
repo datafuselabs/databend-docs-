@@ -13,7 +13,7 @@ import EEFeature from '@site/src/components/EEFeature';
 
 将一个现有的表附加到另一个表上。该命令将一个表的数据和模式从一个数据库移动到另一个数据库，但不会实际复制数据。相反，它会创建一个指向原始表数据的链接，以便访问数据。
 
-Attach Table 使您能够将云服务平台中的表无缝连接到私有部署环境中的现有表，而无需实际移动数据。当您希望将数据从 Databend 的私有部署迁移到 [Databend Cloud](https://www.databend.com) 时，这特别有用，同时最大限度地减少数据传输开销。
+Attach Table 使您能够将云服务平台中的表无缝连接到私有部署环境中已部署的表，而无需实际移动数据。当您希望将数据从 Databend 的私有部署迁移到 [Databend Cloud](https://www.databend.com) 时，这特别有用，同时可以最小化数据传输开销。
 
 附加表以 READ_ONLY 模式运行。在此模式下，源表中的更改会立即反映在附加表中。但是，附加表仅用于查询目的，不支持更新。这意味着不允许对附加表执行 INSERT、UPDATE 和 DELETE 操作；只能执行 SELECT 查询。
 
@@ -24,7 +24,7 @@ ATTACH TABLE <target_table_name> '<source_table_data_URI>'
 CONNECTION = ( <connection_parameters> )
 ```
 
-- `<source_table_data_URI>` 表示源表数据的路径。对于类似 S3 的对象存储，格式为 `s3://<bucket-name>/<database_ID>/<table_ID>`，例如，_s3://databend-toronto/1/23351/_，表示存储桶内表文件夹的确切路径。
+- `<source_table_data_URI>` 表示源表数据的路径。对于类似 S3 的对象存储，格式为 `s3://<bucket-name>/<database_ID>/<table_ID>`，例如，_s3://databend-toronto/1/23351/_，表示桶内表文件夹的确切路径。
 
   ![Alt text](/img/sql/attach.png)
 
@@ -48,11 +48,11 @@ CONNECTION = ( <connection_parameters> )
   timestamp           |2023-07-11 05:38:27.0                              |
   ```
 
-- `CONNECTION` 指定建立链接到存储源表数据的对象存储所需的连接参数。连接参数因不同的存储服务而异，基于其特定的要求和认证机制。有关更多信息，请参阅 [连接参数](../../../00-sql-reference/51-connect-parameters.md)。
+- `CONNECTION` 指定建立到存储源表数据的对象存储的链接所需的连接参数。连接参数因不同的存储服务而异，基于其特定的要求和认证机制。有关更多信息，请参阅 [连接参数](../../../00-sql-reference/51-connect-parameters.md)。
 
 ## 示例
 
-此示例说明了如何在 Databend Cloud 中链接一个新表与 Databend 中现有的表，该表存储在名为 "databend-toronto" 的 Amazon S3 存储桶中。
+此示例说明了如何在 Databend Cloud 中将新表与 Databend 中已存在的表链接，该表存储在名为 "databend-toronto" 的 Amazon S3 桶中。
 
 #### 步骤 1. 在 Databend 中创建表
 
@@ -84,7 +84,7 @@ SELECT * FROM FUSE_SNAPSHOT('default', 'population');
 └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-当您访问 Amazon S3 上的存储桶页面时，您会看到数据组织在路径 `databend-toronto` > `1` > `556` 中，如下所示：
+当您访问 Amazon S3 上的桶页面时，您会看到数据组织在路径 `databend-toronto` > `1` > `556` 中，如下所示：
 
 ![Alt text](/img/sql/attach-table-2.png)
 

@@ -23,14 +23,14 @@ ENABLED = <bool>
 
 | 必填参数 | 描述 |
 |---------------------|-------------|
-| name                | 通知集成的名称。这是一个必填字段。 |
+| name                | 通知集成的名称。此字段为必填项。 |
 | type                | 通知集成的类型。目前仅支持 `webhook`。 |
 | enabled             | 通知集成是否启用。 |
 
 | 可选参数 [(Webhook)](#webhook-notification) | 描述 |
 |---------------------|-------------|
 | url                 | Webhook 的 URL。 |
-| method              | 发送 Webhook 时使用的 HTTP 方法。默认是 `GET`|
+| method              | 发送 Webhook 时使用的 HTTP 方法。默认值为 `GET`|
 | authorization_header| 发送 Webhook 时使用的授权头。 |
 
 ## 示例

@@ -6,12 +6,12 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新: v1.2.402"/>
 
-创建一个包含键和值的 JSON 对象。
+创建一个包含键和值的JSON对象。
 
 - 参数是零个或多个键值对（其中键是字符串，值可以是任何类型）。
-- 如果键为 NULL，则该键值对将从结果对象中省略。然而，如果值为 NULL，该键值对将被保留。
-- 键必须是互不相同的，并且它们在结果 JSON 中的顺序可能与你指定的顺序不同。
-- `TRY_JSON_OBJECT_KEEP_NULL` 在构建对象时发生错误时返回 NULL 值。
+- 如果键为NULL，则该键值对将从结果对象中省略。但是，如果值为NULL，则该键值对将被保留。
+- 键必须是互不相同的，并且它们在结果JSON中的顺序可能与您指定的顺序不同。
+- `TRY_JSON_OBJECT_KEEP_NULL` 在构建对象时发生错误时返回NULL值。
 
 另请参阅: [JSON_OBJECT](json-object.md)
 
@@ -25,7 +25,7 @@ TRY_JSON_OBJECT_KEEP_NULL(key1, value1[, key2, value2[, ...]])
 
 ## 返回类型
 
-JSON 对象。
+JSON对象。
 
 ## 示例
 

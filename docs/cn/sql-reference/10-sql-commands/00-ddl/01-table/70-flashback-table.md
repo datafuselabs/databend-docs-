@@ -3,7 +3,7 @@ title: FLASHBACK TABLE
 sidebar_position: 9
 ---
 
-使用快照ID或时间戳将表回滚到较早的版本，仅涉及元数据操作，使其成为一个快速的过程。
+通过快照ID或时间戳将表回滚到较早的版本，仅涉及元数据操作，使其成为一个快速的过程。
 
 通过命令中指定的快照ID或时间戳，Databend将表回滚到创建快照时的先前状态。要检索表的快照ID和时间戳，请使用[FUSE_SNAPSHOT](../../../20-sql-functions/16-system-functions/fuse_snapshot.md)。
 
@@ -13,17 +13,17 @@ sidebar_position: 9
 
 - 回滚表是Databend时间回溯功能的一部分。在使用该命令之前，请确保您要回滚的表符合时间回溯的条件。例如，该命令不适用于瞬态表，因为Databend不会为这些表创建或存储快照。
 
-- 在将表回滚到先前状态后，您无法回滚操作，但可以再次将表回滚到更早的状态。
+- 在将表回滚到先前的状态后，您无法回滚，但可以再次将表回滚到更早的状态。
 
 - Databend建议仅在紧急恢复时使用此命令。要查询表的历史数据，请使用[AT](../../20-query-syntax/03-query-at.md)子句。
 
 ## 语法
 
 ```sql
--- 使用快照ID恢复
+-- 通过快照ID恢复
 ALTER TABLE <table> FLASHBACK TO (SNAPSHOT => '<snapshot-id>');
 
--- 使用快照时间戳恢复
+-- 通过快照时间戳恢复
 ALTER TABLE <table> FLASHBACK TO (TIMESTAMP => '<timestamp>'::TIMESTAMP);
 ```
 

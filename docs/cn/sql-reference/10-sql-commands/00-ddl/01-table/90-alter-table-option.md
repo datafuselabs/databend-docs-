@@ -6,7 +6,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入: v1.2.25"/>
 
-修改使用默认[Fuse引擎](../../../00-sql-reference/30-table-engines/00-fuse.md)创建的表的选项。对于可以修改的可用选项，请参见[选项](../../../00-sql-reference/30-table-engines/00-fuse.md#options)。
+修改使用默认[Fuse引擎](../../../00-sql-reference/30-table-engines/00-fuse.md)创建的表的选项。可修改的可用选项，请参见[选项](../../../00-sql-reference/30-table-engines/00-fuse.md#options)。
 
 ## 语法
 

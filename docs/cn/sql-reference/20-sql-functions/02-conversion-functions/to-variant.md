@@ -2,7 +2,7 @@
 title: TO_VARIANT
 ---
 
-将一个值转换为 VARIANT 数据类型。
+将值转换为 VARIANT 数据类型。
 
 ## 语法
 

@@ -13,17 +13,17 @@ DATE_ADD(<unit>, <value>,  <date_or_time_expr>)
 
 | 参数                  | 描述                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------|
-| `<unit>`              | 必须是以下值之一：`YEAR`、`QUARTER`、`MONTH`、`DAY`、`HOUR`、`MINUTE` 和 `SECOND`                                 |
-| `<value>`             | 这是您要添加的时间单位数量。例如，如果您想添加2天，则此值为2。                                                   |
+| `<unit>`              | 必须是以下值之一：`YEAR`, `QUARTER`, `MONTH`, `DAY`, `HOUR`, `MINUTE` 和 `SECOND`                                  |
+| `<value>`             | 这是您要添加的时间单位数量。例如，如果您想添加2天，这将是2。                                                      |
 | `<date_or_time_expr>` | 一个 `DATE` 或 `TIMESTAMP` 类型的值                                                                               |
 
 ## 返回类型
 
-函数返回与 `<date_or_time_expr>` 参数相同类型的值。
+该函数返回与 `<date_or_time_expr>` 参数相同类型的值。
 
 ## 示例
 
-查询：
+查询:
 ```sql
 SELECT date_add(YEAR, 1, to_date('2018-01-02'));
 

@@ -17,9 +17,9 @@ SPLIT_PART('<input_string>', '<delimiter>', '<position>')
 
 *position* 参数指定要返回的部分。它使用基于1的索引，但也可以接受正数、负数或零值：
 
-- 如果 *position* 是正数，则从左到右返回该位置的部分，如果不存在则返回 NULL。
-- 如果 *position* 是负数，则从右到左返回该位置的部分，如果不存在则返回 NULL。
-- 如果 *position* 是 0，则视为 1，实际上返回字符串的第一部分。
+- 如果 *position* 是正数，它从左到右返回该位置的部分，如果不存在则返回 NULL。
+- 如果 *position* 是负数，它从右到左返回该位置的部分，如果不存在则返回 NULL。
+- 如果 *position* 是 0，它被视为 1，实际上返回字符串的第一部分。
 
 ## 返回类型
 
@@ -36,7 +36,7 @@ split_part('databend cloud', ' ', 1)|
 ------------------------------------+
 Databend                            |
 
--- 使用空字符串作为分隔符或分隔符在输入字符串中不存在
+-- 使用空字符串作为分隔符或输入字符串中不存在的分隔符
 -- SPLIT_PART 返回整个输入字符串。
 SELECT SPLIT_PART('Databend Cloud', '', 1);
 

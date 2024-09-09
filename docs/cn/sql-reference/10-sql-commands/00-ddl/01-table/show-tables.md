@@ -9,7 +9,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 列出当前或指定数据库中的表。
 
 :::note
-从版本 1.2.415 开始，SHOW TABLES 命令不再在其结果中包含视图。要显示视图，请改用 [SHOW VIEWS](../05-view/show-views.md)。
+从版本 1.2.415 开始，SHOW TABLES 命令不再在其结果中包含视图。要显示视图，请使用 [SHOW VIEWS](../05-view/show-views.md)。
 :::
 
 ## 语法

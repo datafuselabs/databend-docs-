@@ -5,22 +5,22 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新: v1.2.371"/>
 
-开始一个新的事务。BEGIN 和 [COMMIT](commit.md)/[ROLLBACK](rollback.md) 必须一起使用来开始然后保存或撤销一个事务。
+开始一个新的事务。BEGIN 和 [COMMIT](commit.md)/[ROLLBACK](rollback.md) 必须一起使用，以开始事务，然后保存或撤销事务。
 
 - Databend 不支持嵌套事务，因此不匹配的事务语句将被忽略。
 
     ```sql title="示例:"
     BEGIN; -- 开始一个事务
 
-    MERGE INTO ... -- 此语句属于该事务
+    MERGE INTO ... -- 该语句属于事务
 
     BEGIN; -- 在事务中执行 BEGIN 被忽略，不会开始新的事务，不会引发错误
 
-    INSERT INTO ... -- 此语句也属于该事务
+    INSERT INTO ... -- 该语句也属于事务
 
     COMMIT; -- 结束事务
 
-    INSERT INTO ... -- 此语句属于单语句事务
+    INSERT INTO ... -- 该语句属于单语句事务
 
     COMMIT; -- 在多语句事务外执行 COMMIT 被忽略，不会执行提交操作，不会引发错误
 
@@ -62,17 +62,17 @@ BEGIN [ TRANSACTION ]
 
 Databend 自动为每个事务生成一个事务 ID。此 ID 允许用户识别哪些语句属于同一事务，便于问题排查。
 
-如果您在 Databend Cloud 上，可以在 **监控** > **SQL 历史记录** 中找到事务 ID：
+如果您在 Databend Cloud 上，可以在 **Monitor** > **SQL History** 中找到事务 ID：
 
 ![alt text](../../../../../../static/img/documents/sql/transaction-id.png)
 
-在 **事务** 列中，您还可以看到 SQL 语句在执行期间的事务状态：
+在 **Transaction** 列中，您还可以看到 SQL 语句在执行期间的事务状态：
 
 | 事务状态 | 描述                                                                                                                 |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | AutoCommit         | 该语句不属于多语句事务。                                                                 |
-| Active             | 该语句属于多语句事务，并且该事务中之前的所有语句都成功。   |
-| Fail               | 该语句属于多语句事务，并且该事务中至少有一个之前的语句失败。 |
+| Active             | 该语句属于多语句事务，并且该事务中的所有先前语句都成功。   |
+| Fail               | 该语句属于多语句事务，并且该事务中的至少一个先前语句失败。 |
 
 ## 示例
 

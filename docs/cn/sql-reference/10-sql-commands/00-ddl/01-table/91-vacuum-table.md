@@ -4,7 +4,7 @@ sidebar_position: 17
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.368"/>
+<FunctionDescription description="Introduced or updated: v1.2.368"/>
 
 import EEFeature from '@site/src/components/EEFeature';
 
@@ -16,7 +16,7 @@ VACUUM TABLE 命令通过永久移除表中的历史数据文件来帮助优化�
 
 - 孤立文件。在 Databend 中，孤立文件指的是不再与表关联的快照、段和块。孤立文件可能由各种操作和错误生成，例如在数据备份和恢复期间，并且会随着时间的推移占用宝贵的磁盘空间并降低系统性能。
 
-另请参阅: [VACUUM DROP TABLE](91-vacuum-drop-table.md)
+另请参阅：[VACUUM DROP TABLE](91-vacuum-drop-table.md)
 
 ### 语法和示例
 
@@ -24,11 +24,11 @@ VACUUM TABLE 命令通过永久移除表中的历史数据文件来帮助优化�
 VACUUM TABLE <table_name> [ DRY RUN [SUMMARY] ]
 ```
 
-- `DRY RUN [SUMMARY]`: 当指定此参数时，候选的孤立文件不会被移除。相反，将返回最多 1,000 个候选文件及其大小的列表（以字节为单位），显示如果不使用此选项将移除的内容。当包含可选参数 `SUMMARY` 时，命令将返回要移除的文件总数及其总大小（以字节为单位）。
+- `DRY RUN [SUMMARY]`：当指定此参数时，候选的孤立文件不会被移除。相反，将返回最多 1,000 个候选文件及其大小的列表（以字节为单位），显示如果不使用此选项将移除的内容。当包含可选参数 `SUMMARY` 时，命令将返回要移除的文件总数及其总大小（以字节为单位）。
 
 ### 输出
 
-VACUUM TABLE 命令（不带 `DRY RUN`）返回一个表格，总结了真空处理文件的关键统计数据，包含以下列：
+VACUUM TABLE 命令（不带 `DRY RUN`）返回一个表格，总结了被清理文件的关键统计数据，包含以下列：
 
 | 列             | 描述                               |
 |----------------|-------------------------------------------|
@@ -88,13 +88,13 @@ VACUUM TABLE 命令移除早于 `data_retention_time_in_days` 设置的数据文
 SET GLOBAL data_retention_time_in_days = 2;
 ```
 
-`data_retention_time_in_days` 默认为 1 天（24 小时），最大值因 Databend 版本而异：
+`data_retention_time_in_days` 默认值为 1 天（24 小时），最大值因 Databend 版本而异：
 
-| 版本                                  | 默认保留 | 最大保留   |
+| 版本                                  | 默认保留时间 | 最大保留时间   |
 |------------------------------------------|-------------------|------------------|
 | Databend 社区版和企业版 | 1 天（24 小时）  | 90 天          |
-| Databend Cloud（标准版）                | 1 天（24 小时）  | 1 天（24 小时） |
-| Databend Cloud（商业版）                | 1 天（24 小时）  | 90 天          |
+| Databend Cloud (标准版)                | 1 天（24 小时）  | 1 天（24 小时） |
+| Databend Cloud (商业版)                | 1 天（24 小时）  | 90 天          |
 
 要检查 `data_retention_time_in_days` 的当前值：
 
@@ -106,7 +106,7 @@ SHOW SETTINGS LIKE 'data_retention_time_in_days';
 
 Databend 提供了两个命令来移除表中的历史数据文件：VACUUM TABLE 和 [OPTIMIZE TABLE](60-optimize-table.md)（带 PURGE 选项）。尽管这两个命令都能够永久删除数据文件，但它们在处理孤立文件的方式上有所不同：OPTIMIZE TABLE 能够移除孤立快照及其对应的段和块。然而，可能存在没有关联快照的孤立段和块。在这种情况下，只有 VACUUM TABLE 可以帮助清理它们。
 
-VACUUM TABLE 和 OPTIMIZE TABLE 都允许您指定一个时间段来确定要移除的历史数据文件。然而，OPTIMIZE TABLE 要求您事先从查询中获取快照 ID 或时间戳，而 VACUUM TABLE 允许您直接指定保留数据文件的小时数。VACUUM TABLE 在移除前提供了对历史数据文件的增强控制，通过 DRY RUN 选项，您可以在应用命令之前预览要移除的数据文件。这提供了安全的移除体验，并帮助您避免意外的数据丢失。
+VACUUM TABLE 和 OPTIMIZE TABLE 都允许您指定一个时间段来确定要移除的历史数据文件。然而，OPTIMIZE TABLE 要求您事先通过查询获取快照 ID 或时间戳，而 VACUUM TABLE 允许您直接指定保留数据文件的小时数。VACUUM TABLE 在移除前提供了对历史数据文件的增强控制，通过 DRY RUN 选项，您可以在应用命令之前预览要移除的数据文件。这提供了安全的移除体验，并帮助您避免意外的数据丢失。
 
 
 | 	                                                  | VACUUM TABLE 	 | OPTIMIZE TABLE 	 |

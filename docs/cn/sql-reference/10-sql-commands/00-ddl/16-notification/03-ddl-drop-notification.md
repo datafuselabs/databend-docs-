@@ -1,5 +1,5 @@
 ---
-title: DROP NOTIFICATION INTEGRATION
+title: 删除通知集成
 sidebar_position: 3
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
@@ -8,7 +8,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 DROP NOTIFICATION INTEGRATION 语句用于删除现有的通知。
 
-**注意:** 此功能在 Databend Cloud 中开箱即用。
+**注意:** 此功能仅在 Databend Cloud 中开箱即用。
 
 ## 语法
 
@@ -18,7 +18,7 @@ DROP NOTIFICATION INTEGRATION [ IF EXISTS ] <name>
 
 | 参数                             | 描述                                                                                        |
 |----------------------------------|------------------------------------------------------------------------------------------------------|
-| IF EXISTS                        | 可选。如果指定，则仅在存在同名通知时才会删除通知。 |
+| IF EXISTS                        | 可选。如果指定，则仅在存在同名通知时删除通知。 |
 | name                             | 通知的名称。这是一个必填字段。                                                       |
 
 

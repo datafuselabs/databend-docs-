@@ -10,7 +10,7 @@ title: SQL 函数参考
 - [条件表达式函数](./03-conditional-functions/index.md) 实现条件逻辑和 case 语句。
 - [上下文函数](./15-context-functions/index.md) 提供当前 SQL 执行上下文的信息。
 - [转换函数](./02-conversion-functions/index.md) 转换数据类型和强制转换值。
-- [日期与时间函数](./05-datetime-functions/index.md) 操作和格式化日期和时间。
+- [日期 & 时间函数](./05-datetime-functions/index.md) 操作和格式化日期和时间。
 - [地理空间函数](./09-geo-functions/index.md) 处理和操作地理空间数据。
 - [数值函数](./04-numeric-functions/index.md) 执行计算和数值操作。
 - [字符串函数](./06-string-functions/index.md) 操作字符串和执行正则表达式操作。
@@ -20,8 +20,8 @@ title: SQL 函数参考
 
 ## 聚合函数
 
-- [聚合函数](./07-aggregate-functions/index.md) 计算汇总数据，如总和、平均值、计数等。
-- [窗口函数](./08-window-functions/index.md) 在指定行范围内提供聚合计算。
+- [聚合函数](./07-aggregate-functions/index.md) 计算汇总，如总和、平均值、计数等。
+- [窗口函数](./08-window-functions/index.md) 在指定范围内的行上提供聚合计算。
 
 ## 全文搜索函数
 
@@ -33,7 +33,7 @@ title: SQL 函数参考
 
 ## 专用函数
 
-- [哈希函数](./12-hash-functions/index.md) 生成数据安全和比较的哈希值。
+- [哈希函数](./12-hash-functions/index.md) 为数据安全和比较生成哈希值。
 - [IP 地址函数](./14-ip-address-functions/index.md) 操作和分析 IP 地址数据。
 - [UUID 函数](./13-uuid-functions/index.md) 生成和操作 UUID。
 

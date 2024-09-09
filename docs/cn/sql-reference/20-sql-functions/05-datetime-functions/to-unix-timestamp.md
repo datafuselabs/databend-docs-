@@ -2,7 +2,7 @@
 title: TO_UNIX_TIMESTAMP
 ---
 
-将日期/时间格式的 timestamp 转换为 Unix timestamp 格式。Unix timestamp 表示自 1970 年 1 月 1 日 00:00:00 UTC 以来经过的秒数。
+将日期/时间格式的timestamp转换为Unix timestamp格式。Unix timestamp表示自1970年1月1日00:00:00 UTC以来经过的秒数。
 
 ## 语法
 
@@ -16,7 +16,7 @@ TO_UNIX_TIMESTAMP(<expr>)
 | ----------- | ------------ |
 | `<expr>`    | 时间戳       |
 
-有关时间戳数据类型的更多信息，请参阅 [日期与时间](../../00-sql-reference/10-data-types/20-data-type-time-date-types.md)。
+有关时间戳数据类型的更多信息，请参阅[日期与时间](../../00-sql-reference/10-data-types/20-data-type-time-date-types.md)。
 
 ## 返回类型
 

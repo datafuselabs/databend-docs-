@@ -6,7 +6,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新: v1.2.595"/>
 
-将值转换为 JSON 数组，同时跳过 NULL 值。
+将值转换为JSON数组，同时跳过NULL值。
 
 另请参阅: [JSON_OBJECT_AGG](aggregate-json-object-agg.md)
 
@@ -18,11 +18,11 @@ JSON_ARRAY_AGG(<expr>)
 
 ## 返回类型
 
-JSON 数组。
+JSON数组。
 
 ## 示例
 
-此示例演示了 JSON_ARRAY_AGG 如何将每一列的值聚合为 JSON 数组：
+此示例演示了JSON_ARRAY_AGG如何将每列的值聚合为JSON数组：
 
 ```sql
 CREATE TABLE d (

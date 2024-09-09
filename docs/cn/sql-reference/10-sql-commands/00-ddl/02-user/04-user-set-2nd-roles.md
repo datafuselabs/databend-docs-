@@ -1,11 +1,11 @@
 ---
-title: SET SECONDARY ROLES
+title: 设置辅助角色
 sidebar_position: 6
 ---
 
 激活当前会话的所有辅助角色。这意味着用户被授予的所有辅助角色都将处于活动状态，扩展用户的权限。有关活动角色和辅助角色的更多信息，请参阅[活动角色与辅助角色](/guides/security/access-control/roles#active-role--secondary-roles)。
 
-另请参阅：[SET ROLE](04-user-set-role.md)
+另请参阅：[设置角色](04-user-set-role.md)
 
 ## 语法
 

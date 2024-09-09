@@ -3,9 +3,9 @@ title: PERCENT_RANK
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入版本: v1.1.50"/>
+<FunctionDescription description="引入: v1.1.50"/>
 
-返回给定值在一组值中的相对排名。结果值介于0和1之间，包括0和1。请注意，任何集合中的第一行具有0的PERCENT_RANK。
+返回一组值中给定值的相对排名。结果值介于0和1之间，包括0和1。请注意，任何集合中的第一行都有一个PERCENT_RANK为0。
 
 另请参阅: [CUME_DIST](cume-dist.md)
 
@@ -20,7 +20,7 @@ PERCENT_RANK() OVER (
 
 ## 示例
 
-此示例检索学生的姓名、分数、年级以及使用PERCENT_RANK()窗口函数在每个年级内的百分位排名。
+此示例检索学生的姓名、分数、年级以及使用PERCENT_RANK()窗口函数在每个年级内的百分位排名（percent_rank）。
 
 ```sql
 CREATE TABLE students (

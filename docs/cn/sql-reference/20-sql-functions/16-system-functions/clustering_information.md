@@ -7,7 +7,7 @@ title: CLUSTERING_INFORMATION
 ## 语法
 
 ```sql
-CLUSTERING_INFORMATION('<数据库名>', '<表名>')
+CLUSTERING_INFORMATION('<database_name>', '<table_name>')
 ```
 
 ## 示例
@@ -30,12 +30,12 @@ unclustered_block_count: 0
   block_depth_histogram: {"00002":3}
 ```
 
-| 参数                    	| 描述                                                                                                                  	|
+| 参数                    	| 描述                                                                                                                    	|
 |-------------------------	|------------------------------------------------------------------------------------------------------------------------	|
-| cluster_key             	| 定义的聚类键。                                                                                                        	|
-| total_block_count       	| 当前的块数量。                                                                                                        	|
-| constant_block_count    	| 最小/最大值相等的块数量，意味着每个块仅包含一个（组）聚类键值。                                                       	|
-| unclustered_block_count 	| 尚未进行聚类的块数量。                                                                                                  	|
-| average_overlaps        	| 给定范围内重叠块的平均比例。                                                                                          	|
-| average_depth           	| 聚类键的重叠分区的平均深度。                                                                                          	|
-| block_depth_histogram   	| 每个深度级别的分区数量。较低深度级别有较高数量的分区，表明表聚类更有效。                                            	|
+| cluster_key             	| 定义的聚类键。                                                                                                          	|
+| total_block_count       	| 当前块的数量。                                                                                                          	|
+| constant_block_count    	| 最小/最大值相等的块的数量，意味着每个块仅包含一个（组）聚类键值。                                                       	|
+| unclustered_block_count 	| 尚未聚类的块的数量。                                                                                                    	|
+| average_overlaps        	| 给定范围内重叠块的平均比率。                                                                                            	|
+| average_depth           	| 聚类键的重叠分区的平均深度。                                                                                            	|
+| block_depth_histogram   	| 每个深度级别的分区数量。较低深度级别有更多分区表示表聚类更有效。                                                        	|

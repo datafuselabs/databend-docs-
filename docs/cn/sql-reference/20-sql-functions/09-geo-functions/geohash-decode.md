@@ -7,7 +7,7 @@ title: GEOHASH_DECODE
 ## 语法
 
 ```sql
-GEOHASH_DECODE('<geohashed-string>')
+GEOHASH_DECODE('<geohashed-string\>')
 ```
 
 ## 示例

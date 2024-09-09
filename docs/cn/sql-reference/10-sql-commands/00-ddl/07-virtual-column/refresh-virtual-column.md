@@ -15,7 +15,7 @@ import EEFeature from '@site/src/components/EEFeature';
 
 - 在已经包含变体数据的表上创建虚拟列后，需要刷新虚拟列。
 - 修改表的虚拟列后，刷新它们。
-- 如果 `enable_refresh_virtual_column_after_write` 设置为 1（默认），则在数据更新后自动刷新表的虚拟列。但是，如果未启用此设置，则需要手动刷新虚拟列。
+- 如果 `enable_refresh_virtual_column_after_write` 设置为 1（默认），则在数据更新后会自动刷新表的虚拟列。但是，如果未启用此设置，则需要手动刷新虚拟列。
 
 ## 语法
 

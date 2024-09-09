@@ -15,17 +15,17 @@ LIST(<expr>)
 
 ## 参数
 
-| 参数       | 描述         |
+| 参数      | 描述         |
 |-----------| ------------ |
 | `<expr>`  | 任何表达式   |
 
 ## 返回类型
 
-返回一个 [Array](../../00-sql-reference/10-data-types/40-data-type-array-types.md)，其元素类型与原始数据类型相同。
+返回一个 [Array](../../00-sql-reference/10-data-types/40-data-type-array-types.md)，其元素与原始数据的类型相同。
 
 ## 示例
 
-以下示例展示了如何使用 ARRAY_AGG 函数将数据聚合并以方便的数组格式呈现：
+此示例展示了如何使用 ARRAY_AGG 函数将数据聚合并以方便的数组格式呈现：
 
 ```sql
 -- 创建表并插入示例数据

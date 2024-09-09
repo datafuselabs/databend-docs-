@@ -20,7 +20,7 @@ COMMENT = '<comment>'
 此示例创建一个带有注释的表，然后修改注释：
 
 ```sql
--- 创建一个带有注释的表
+-- 创建带有注释的表
 CREATE TABLE t(id INT) COMMENT ='original-comment';
 
 SHOW CREATE TABLE t;
@@ -46,7 +46,7 @@ SHOW CREATE TABLE t;
 此示例创建一个没有注释的表，然后向表添加注释：
 
 ```sql
--- 创建一个没有注释的表
+-- 创建没有注释的表
 CREATE TABLE t(id INT);
 
 SHOW CREATE TABLE t;

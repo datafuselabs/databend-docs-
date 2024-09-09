@@ -7,7 +7,7 @@ title: MEDIAN
 MEDIAN() 函数计算数值数据序列的中位数。
 
 :::caution
-NULL 值不计入计算。
+NULL 值不计入。
 :::
 
 ## 语法
@@ -24,7 +24,7 @@ MEDIAN(<expr>)
 
 ## 返回类型
 
-返回值的类型。
+值的类型。
 
 ## 示例
 

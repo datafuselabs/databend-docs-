@@ -7,7 +7,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新: v1.2.339"/>
 
-基于查询创建一个新的视图；逻辑视图不存储任何物理数据，当我们访问一个逻辑视图时，它会将SQL转换为子查询格式来完成。
+基于查询创建一个新的视图；逻辑视图不存储任何物理数据，当我们访问一个逻辑视图时，它会将 SQL 转换为子查询格式来完成。
 
 例如，如果你创建一个逻辑视图如下：
 
