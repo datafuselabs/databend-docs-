@@ -5,7 +5,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新: v1.2.606"/>
 
-将一个 GEOMETRY 对象从一个 [空间参考系统 (SRS)](https://en.wikipedia.org/wiki/Spatial_reference_system) 转换到另一个。如果只需要更改 SRID 而不改变坐标（例如，如果 SRID 不正确），请使用 [ST_SETSRID](st-setsrid.md) 代替。
+将一个GEOMETRY对象从一个[空间参考系统 (SRS)](https://en.wikipedia.org/wiki/Spatial_reference_system)转换到另一个。如果你只需要更改SRID而不改变坐标（例如，如果SRID不正确），请使用[ST_SETSRID](st-setsrid.md)。
 
 ## 语法
 
@@ -15,15 +15,15 @@ ST_TRANSFORM(<geometry> [, <from_srid>], <to_srid>)
 
 ## 参数
 
-| 参数          | 描述                                                                                      |
-|---------------|-------------------------------------------------------------------------------------------|
-| `<geometry>`  | 参数必须是 GEOMETRY 对象类型的表达式。                                                    |
-| `<from_srid>` | 可选的 SRID，标识输入 GEOMETRY 对象的当前 SRS，如果省略此参数，则使用输入 GEOMETRY 对象中指定的 SRID。 |
-| `<to_srid>`   | 标识要使用的 SRS 的 SRID，将输入的 GEOMETRY 对象转换为使用此 SRS 的新对象。                |
+| 参数          | 描述                                                                                                                                               |
+|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `<geometry>`  | 参数必须是GEOMETRY对象类型的表达式。                                                                                               |
+| `<from_srid>` | 可选的SRID，用于标识输入GEOMETRY对象的当前SRS，如果省略此参数，则使用输入GEOMETRY对象中指定的SRID。 |
+| `<to_srid>`   | 标识要使用的SRS的SRID，将输入GEOMETRY对象转换为使用此SRS的新对象。                                         |
 
 ## 返回类型
 
-Geometry.
+Geometry。
 
 ## 示例
 

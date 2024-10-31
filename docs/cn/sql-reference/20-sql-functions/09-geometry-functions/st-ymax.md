@@ -3,9 +3,9 @@ title: ST_YMAX
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新于：v1.2.512"/>
+<FunctionDescription description="引入或更新: v1.2.512"/>
 
-返回指定GEOMETRY对象中所有点包含的最大纬度（Y坐标）。
+返回指定GEOMETRY对象中包含的所有点的最大纬度（Y坐标）。
 
 ## 语法
 
@@ -15,9 +15,9 @@ ST_YMAX(<geometry>)
 
 ## 参数
 
-| 参数         | 描述                                             |
+| 参数         | 描述                                               |
 |--------------|--------------------------------------------------|
-| `<geometry>` | 参数必须是GEOMETRY类型的表达式。                 |
+| `<geometry>` | 参数必须是GEOMETRY类型的表达式。                  |
 
 ## 返回类型
 

@@ -3,9 +3,9 @@ title: CUME_DIST
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入版本: v1.2.7"/>
+<FunctionDescription description="引入: v1.2.7"/>
 
-返回一组值中给定值的累积分布。它计算值小于或等于指定值的行数占总行数的比例。请注意，结果值介于0和1之间（含0和1）。
+返回一组值中给定值的累积分布。它计算值小于或等于指定值的行的比例，除以总行数。请注意，结果值介于0和1之间，包括0和1。
 
 另请参阅: [PERCENT_RANK](percent_rank.md)
 

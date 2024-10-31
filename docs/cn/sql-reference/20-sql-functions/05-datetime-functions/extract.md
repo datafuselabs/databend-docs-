@@ -4,11 +4,11 @@ title: EXTRACT
 
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新：v1.2.153"/>
+<FunctionDescription description="引入或更新: v1.2.153"/>
 
-提取日期、时间或时间戳的指定部分。
+从日期、时间或时间戳中提取指定的部分。
 
-另请参阅：[DATE_PART](date-part.md)
+另请参阅: [DATE_PART](date-part.md)
 
 ## 语法
 
@@ -16,8 +16,8 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 EXTRACT( YEAR | QUARTER | MONTH | WEEK | DAY | HOUR | MINUTE | SECOND | DOW | DOY FROM <date_or_time_expr> )
 ```
 
-- DOW：星期几。
-- DOY：一年中的第几天。
+- DOW: 星期几。
+- DOY: 一年中的第几天。
 
 ## 返回类型
 

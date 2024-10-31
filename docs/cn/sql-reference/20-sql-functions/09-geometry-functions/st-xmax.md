@@ -3,9 +3,9 @@ title: ST_XMAX
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新：v1.2.458"/>
+<FunctionDescription description="引入或更新: v1.2.458"/>
 
-返回指定GEOMETRY对象中所有点的最大经度（X坐标）。
+返回指定GEOMETRY对象中所有点包含的最大经度（X坐标）。
 
 ## 语法
 
@@ -15,9 +15,9 @@ ST_XMAX(<geometry>)
 
 ## 参数
 
-| 参数         | 描述                                             |
+| 参数         | 描述                                               |
 |--------------|--------------------------------------------------|
-| `<geometry>` | 参数必须是GEOMETRY类型的表达式。                 |
+| `<geometry>` | 参数必须是GEOMETRY类型的表达式。                  |
 
 ## 返回类型
 

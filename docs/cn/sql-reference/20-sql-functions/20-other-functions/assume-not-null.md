@@ -16,7 +16,7 @@ ASSUME_NOT_NULL(<x>)
 
 ## 返回类型
 
-返回非`Nullable`类型的原始数据类型；对于`Nullable`类型，返回其嵌入的非`Nullable`数据类型。
+返回非`Nullable`类型的原始数据类型；对于`Nullable`类型，返回嵌入的非`Nullable`数据类型。
 
 ## 示例
 

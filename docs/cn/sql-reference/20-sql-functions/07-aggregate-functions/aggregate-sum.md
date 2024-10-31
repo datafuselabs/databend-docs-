@@ -7,7 +7,7 @@ title: SUM
 SUM() 函数计算一组值的总和。
 
 :::caution
-NULL 值不计入总数。
+NULL 值不计入。
 :::
 
 ## 语法
@@ -24,7 +24,7 @@ SUM(<expr>)
 
 ## 返回类型
 
-如果输入类型是双精度浮点数，则返回双精度浮点数；否则返回整数。
+如果输入类型是 double，则返回 double，否则返回整数。
 
 ## 示例
 
@@ -44,7 +44,7 @@ VALUES (1, 1, 10),
        (5, 5, 15);
 ```
 
-**查询示例：计算产品销售总量**
+**查询示例：计算售出的产品总数**
 ```sql
 SELECT SUM(quantity) AS total_quantity_sold
 FROM sales_data;

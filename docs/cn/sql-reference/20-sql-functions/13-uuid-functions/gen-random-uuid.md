@@ -2,7 +2,7 @@
 title: GEN_RANDOM_UUID
 ---
 
-生成基于 v4 的随机 UUID。
+基于 v4 生成一个随机的 UUID。
 
 ## 语法
 

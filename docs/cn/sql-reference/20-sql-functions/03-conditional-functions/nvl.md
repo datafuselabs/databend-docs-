@@ -5,7 +5,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新: v1.2.312"/>
 
-如果 `<expr1>` 为 NULL，则返回 `<expr2>`，否则返回 `<expr1>`。
+如果 `<expr1>` 为 NULL，返回 `<expr2>`，否则返回 `<expr1>`。
 
 ## 语法
 

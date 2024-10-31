@@ -3,7 +3,7 @@ title: ST_ASGEOJSON
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新：v1.2.427"/>
+<FunctionDescription description="引入或更新: v1.2.427"/>
 
 将一个 GEOMETRY 对象转换为 [GeoJSON](https://geojson.org/) 表示形式。
 
@@ -17,7 +17,7 @@ ST_ASGEOJSON(<geometry>)
 
 | 参数         | 描述                                           |
 |--------------|------------------------------------------------|
-| `<geometry>` | 参数必须是一个 GEOMETRY 类型的表达式。         |
+| `<geometry>` | 参数必须是 GEOMETRY 类型的表达式。             |
 
 ## 返回类型
 

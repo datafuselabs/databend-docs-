@@ -17,7 +17,7 @@ END AS <column_name>
 
 ## 示例
 
-此示例使用 CASE 语句对员工薪资进行分类，并展示了一个动态分配的列名 "SalaryCategory"：
+此示例使用 CASE 语句对员工薪资进行分类，并以动态分配的列名 "SalaryCategory" 展示详细信息：
 
 ```sql
 -- 创建示例表

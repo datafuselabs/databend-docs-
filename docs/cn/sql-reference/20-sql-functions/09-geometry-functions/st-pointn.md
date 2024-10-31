@@ -3,9 +3,9 @@ title: ST_POINTN
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新：v1.2.458"/>
+<FunctionDescription description="引入或更新: v1.2.458"/>
 
-返回 LineString 中指定索引处的点。
+返回LineString中指定索引处的Point。
 
 ## 语法
 
@@ -15,18 +15,18 @@ ST_POINTN(<geometry>, <index>)
 
 ## 参数
 
-| 参数         | 描述                                                                              |
+| 参数         | 描述                                                                       |
 |--------------|-----------------------------------------------------------------------------------|
-| `<geometry>` | 参数必须是表示 LineString 的几何类型（GEOMETRY）的表达式。                        |
-| `<index>`    | 要返回的点的索引。                                                                |
+| `<geometry>` | 参数必须是表示LineString的GEOMETRY类型的表达式。 |
+| `<index>`    | 要返回的Point的索引。                                                 |
 
 :::note
-索引是从1开始的，负索引表示从 LineString 末尾开始的偏移量。如果索引超出范围，函数将返回错误。
+索引是基于1的，负索引用作从LineString末尾的偏移量。如果索引超出边界，函数将返回错误。
 :::
 
 ## 返回类型
 
-几何类型（Geometry）。
+Geometry。
 
 ## 示例
 

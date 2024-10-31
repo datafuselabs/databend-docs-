@@ -1,5 +1,5 @@
 ---
-title: 昨日
+title: YESTERDAY
 ---
 
 返回昨天的日期，等同于 `today() - 1`。

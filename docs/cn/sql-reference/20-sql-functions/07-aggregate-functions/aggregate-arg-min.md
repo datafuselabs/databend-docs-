@@ -14,8 +14,8 @@ ARG_MIN(<arg>, <val>)
 
 | 参数      | 描述                                                                                       |
 | --------- | ------------------------------------------------------------------------------------------------- |
-| `<arg>`   | 参数，可以是 [Databend 支持的任何数据类型](../../00-sql-reference/10-data-types/index.md) |
-| `<val>`   | 值，可以是 [Databend 支持的任何数据类型](../../00-sql-reference/10-data-types/index.md)    |
+| `<arg>`   | [Databend 支持的任何数据类型的参数](../../00-sql-reference/10-data-types/index.md) |
+| `<val>`   | [Databend 支持的任何数据类型的值](../../00-sql-reference/10-data-types/index.md)    |
 
 ## 返回类型
 

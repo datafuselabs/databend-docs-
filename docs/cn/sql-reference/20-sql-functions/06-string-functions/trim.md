@@ -2,7 +2,7 @@
 title: TRIM
 ---
 
-返回不包含指定移除字符串的前导或尾随出现的字符串。如果未指定移除字符串，则移除空格。
+返回不包含指定移除字符串的前导或尾随出现的字符串。如果省略移除字符串，则移除空格。
 
 ## 语法
 
@@ -25,13 +25,14 @@ SELECT TRIM(BOTH 'xxx' FROM 'xxxdatabendxxx');
 ```sql
 SELECT TRIM(LEADING 'xxx' FROM 'xxxdatabend' );
 ```
+
 以下示例从字符串 'databendxxx' 中移除尾随的字符串 'xxx'：
 
 ```sql
 SELECT TRIM(TRAILING 'xxx' FROM 'databendxxx' );
 ```
 
-如果未指定移除字符串，该函数将移除所有前导和尾随空格。以下示例移除前导和/或尾随空格：
+如果未指定移除字符串，则该函数移除所有前导和尾随的空格。以下示例移除前导和/或尾随的空格：
 
 ```sql
 SELECT TRIM('   databend   ');

@@ -2,7 +2,7 @@
 title: BUILD_BITMAP
 ---
 
-将一个正整数数组转换为 BITMAP 值。
+将一个正整数数组转换为BITMAP值。
 
 ## 语法
 

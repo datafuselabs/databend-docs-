@@ -3,9 +3,9 @@ title: ST_MAKELINE
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新：v1.2.391"/>
+<FunctionDescription description="引入或更新: v1.2.391"/>
 
-构造一个表示连接输入的两个GEOMETRY对象中点的线的GEOMETRY对象。
+构造一个表示连接输入两个GEOMETRY对象中点的线的GEOMETRY对象。
 
 ## 语法
 

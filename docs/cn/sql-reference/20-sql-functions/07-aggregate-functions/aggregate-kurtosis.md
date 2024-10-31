@@ -4,7 +4,7 @@ title: KURTOSIS
 
 聚合函数。
 
-`KURTOSIS()` 函数返回所有输入值的峰度（超额）。
+`KURTOSIS()` 函数返回所有输入值的峰度。
 
 ## 语法
 
@@ -40,7 +40,7 @@ VALUES (1, 'AAPL', 150),
        (5, 'AAPL', 155);
 ```
 
-**查询示例：计算苹果股票价格的峰度（超额）**
+**查询示例：计算苹果股票价格的峰度**
 
 ```sql
 SELECT KURTOSIS(price) AS excess_kurtosis

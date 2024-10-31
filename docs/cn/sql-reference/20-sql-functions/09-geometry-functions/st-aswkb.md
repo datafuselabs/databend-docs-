@@ -5,7 +5,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新: v1.2.436"/>
 
-将一个 GEOMETRY 对象转换为 [WKB（Well-known Binary）](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry#Well-known_binary) 格式的表示。
+将一个GEOMETRY对象转换为[WKB(well-known-binary)](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry#Well-known_binary)格式的表示。
 
 ## 语法
 
@@ -21,7 +21,7 @@ ST_ASWKB(<geometry>)
 
 | 参数         | 描述                                           |
 |--------------|------------------------------------------------|
-| `<geometry>` | 参数必须是 GEOMETRY 类型的表达式。             |
+| `<geometry>` | 参数必须是GEOMETRY类型的表达式。               |
 
 ## 返回类型
 

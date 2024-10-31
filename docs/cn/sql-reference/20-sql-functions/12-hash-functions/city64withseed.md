@@ -2,7 +2,7 @@
 title: CITY64WITHSEED
 ---
 
-计算字符串的 City64WithSeed 64 位哈希值。
+计算字符串的City64WithSeed 64位哈希值。
 
 ## 语法
 

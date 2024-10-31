@@ -2,7 +2,7 @@
 title: H3_GET_UNIDIRECTIONAL_EDGES_FROM_HEXAGON
 ---
 
-返回从提供的 H3Index 中获取的所有单向边。
+返回从提供的 H3Index 开始的所有单向边。
 
 ## 语法
 

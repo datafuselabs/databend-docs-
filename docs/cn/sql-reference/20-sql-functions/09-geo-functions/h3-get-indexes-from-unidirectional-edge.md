@@ -2,7 +2,7 @@
 title: H3_GET_INDEXES_FROM_UNIDIRECTIONAL_EDGE
 ---
 
-从给定的单向边 H3Index 返回起始和目标六边形索引。
+返回给定单向边 H3Index 的源和目标六边形索引。
 
 ## 语法
 

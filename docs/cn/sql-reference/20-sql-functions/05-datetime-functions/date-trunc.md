@@ -13,8 +13,8 @@ DATE_TRUNC(<precision>, <date_or_time_expr>)
 
 | 参数                  | 描述                                                                                             |
 |-----------------------|--------------------------------------------------------------------------------------------------|
-| `<precision>`          | 必须是以下值之一：`YEAR`、`QUARTER`、`MONTH`、`DAY`、`HOUR`、`MINUTE` 和 `SECOND`                |
-| `<date_or_time_expr>` | `DATE` 或 `TIMESTAMP` 类型的值                                                                   |
+| `<precision>`          | 必须是以下值之一：`YEAR`, `QUARTER`, `MONTH`, `DAY`, `HOUR`, `MINUTE` 和 `SECOND`                |
+| `<date_or_time_expr>` | `DATE` 或 `TIMESTAMP` 类型的值                                                                  |
 
 ## 返回类型
 

@@ -14,8 +14,8 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 | num_rows                         | Parquet 文件中的总行数或记录数                               |
 | num_row_groups                   | Parquet 文件中的行组数量                                     |
 | serialized_size                  | Parquet 文件在磁盘上的大小（压缩后）                         |
-| max_row_groups_size_compressed   | 最大的行组大小（压缩后）                                     |
-| max_row_groups_size_uncompressed | 最大的行组大小（未压缩）                                     |
+| max_row_groups_size_compressed   | 最大行组的大小（压缩后）                                     |
+| max_row_groups_size_uncompressed | 最大行组的大小（未压缩）                                     |
 
 ## 语法
 

@@ -8,7 +8,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 搜索包含指定关键词的文档。请注意，MATCH 函数只能在 WHERE 子句中使用。
 
 :::info
-Databend 的 MATCH 函数灵感来源于 Elasticsearch 的 [MATCH](https://www.elastic.co/guide/en/elasticsearch/reference/current/sql-functions-search.html#sql-functions-search-match)。
+Databend 的 MATCH 函数灵感来自 Elasticsearch 的 [MATCH](https://www.elastic.co/guide/en/elasticsearch/reference/current/sql-functions-search.html#sql-functions-search-match)。
 :::
 
 ## 语法
@@ -19,15 +19,15 @@ MATCH( '<columns>', '<keywords>'[, '<options>'] )
 
 | 参数         | 描述                                                                                                                                                                                                                                               |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `<columns>`  | 表中要搜索指定关键词的列名列表，以逗号分隔，可选地使用 (^) 语法进行加权，允许为每个列分配不同的权重，影响每个列在搜索中的重要性。 |
-| `<keywords>` | 要匹配表中指定列的关键词。此参数还可用于后缀匹配，搜索词后跟星号 (*) 可以匹配任意数量的字符或词。                                                                                                                                                                                       |
-| `<options>` | 一组以分号 `;` 分隔的配置选项，用于自定义搜索行为。详情见下表。 |
+| `<columns>`  | 表中要搜索指定关键词的列名列表，用逗号分隔，可选地使用语法 (^) 进行加权，允许为每个列分配不同的权重，影响搜索中每个列的重要性。 |
+| `<keywords>` | 要匹配表中指定列的关键词。此参数还可用于后缀匹配，其中搜索词后跟星号 (*) 可以匹配任意数量的字符或单词。                                                                                                                                                                                       |
+| `<options>` | 一组配置选项，用分号 `;` 分隔，自定义搜索行为。详情见下表。 |
 
 | 选项        | 描述                                                                                                                                                                                         | 示例                                                                                               | 解释                                                                                                                                                                                                          |
 |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| fuzziness | 允许匹配指定 Levenshtein 距离内的词项。`fuzziness` 可以设置为 1 或 2。                                                                                                    | SELECT id, score(), content FROM t WHERE match(content, 'box', 'fuzziness=1');                       | 当匹配查询词 "box" 时，`fuzziness=1` 允许匹配 "fox" 等词项，因为 "box" 和 "fox" 的 Levenshtein 距离为 1。                                                                          |
+| fuzziness | 允许匹配在指定 Levenshtein 距离内的词项。`fuzziness` 可以设置为 1 或 2。                                                                                                    | SELECT id, score(), content FROM t WHERE match(content, 'box', 'fuzziness=1');                       | 当匹配查询词 "box" 时，`fuzziness=1` 允许匹配 "fox" 等词项，因为 "box" 和 "fox" 的 Levenshtein 距离为 1。                                                                          |
 | operator  | 指定多个查询词项的组合方式。可以是 OR（默认）或 AND。OR 返回包含任意查询词项的结果，而 AND 返回包含所有查询词项的结果。     | SELECT id, score(), content FROM t WHERE match(content, 'action works', 'fuzziness=1;operator=AND'); | 使用 `operator=AND`，查询要求结果中同时包含 "action" 和 "works"。由于 `fuzziness=1`，它匹配 "Actions" 和 "words" 等词项，因此返回 "Actions speak louder than words"。 |
-| lenient   | 控制当查询文本无效时是否报告错误。默认为 `false`。如果设置为 `true`，则不报告错误，如果查询文本无效，则返回空结果集。 | SELECT id, score(), content FROM t WHERE match(content, '()', 'lenient=true');                       | 如果查询文本 `()` 无效，设置 `lenient=true` 会阻止抛出错误，并返回空结果集。                                                                               |
+| lenient   | 控制当查询文本无效时是否报告错误。默认为 `false`。如果设置为 `true`，则不会报告错误，如果查询文本无效，则返回空结果集。 | SELECT id, score(), content FROM t WHERE match(content, '()', 'lenient=true');                       | 如果查询文本 `()` 无效，设置 `lenient=true` 会阻止抛出错误，并返回空结果集。                                                                               |
 
 ## 示例
 

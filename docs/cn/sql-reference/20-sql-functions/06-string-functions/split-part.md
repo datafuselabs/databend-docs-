@@ -36,7 +36,7 @@ split_part('databend cloud', ' ', 1)|
 ------------------------------------+
 Databend                            |
 
--- 使用空字符串作为分隔符或分隔符在输入字符串中不存在
+-- 使用空字符串作为分隔符或输入字符串中不存在的分隔符
 -- SPLIT_PART 返回整个输入字符串。
 SELECT SPLIT_PART('Databend Cloud', '', 1);
 
@@ -58,7 +58,7 @@ split_part('2023-10-19 15:30:45   info   log message goes here', '   ', 3)|
 --------------------------------------------------------------------------+
 Log message goes here                                                     |
 
--- SPLIT_PART 返回空字符串，因为指定的部分根本不存在。
+-- SPLIT_PART 返回空字符串，因为指定部分根本不存在。
 SELECT SPLIT_PART('2023-10-19 15:30:45   INFO   Log message goes here', '   ', 4);
 
 split_part('2023-10-19 15:30:45   info   log message goes here', '   ', 4)|

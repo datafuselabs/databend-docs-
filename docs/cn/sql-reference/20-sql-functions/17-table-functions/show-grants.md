@@ -5,7 +5,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新: v1.2.487"/>
 
-列出明确授予用户、角色或特定对象的权限。
+列出显式授予用户、角色或特定对象的权限。
 
 另请参阅: [SHOW GRANTS](/sql/sql-commands/ddl/user/show-grants)
 

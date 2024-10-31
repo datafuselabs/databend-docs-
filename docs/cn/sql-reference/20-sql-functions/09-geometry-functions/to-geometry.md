@@ -4,11 +4,11 @@ title_includes: TRY_TO_GEOMETRY
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新：v1.2.431"/>
+<FunctionDescription description="引入或更新: v1.2.431"/>
 
-解析输入并返回一个 GEOMETRY 类型的值。
+解析输入并返回一个GEOMETRY类型的值。
 
-`TRY_TO_GEOMETRY` 在解析过程中发生错误时返回 NULL 值。
+`TRY_TO_GEOMETRY` 在解析过程中发生错误时返回NULL值。
 
 ## 语法
 
@@ -25,10 +25,10 @@ TRY_TO_GEOMETRY(<variant>, [<srid>])
 
 | 参数        | 描述                                                                                                      |
 |-------------|-----------------------------------------------------------------------------------------------------------|
-| `<string>`  | 参数必须是 WKT、EWKT、WKB 或 EWKB 格式的十六进制字符串，或 GeoJSON 格式。                                  |
-| `<binary>`  | 参数必须是 WKB 或 EWKB 格式的二进制表达式。                                                                |
-| `<variant>` | 参数必须是 GeoJSON 格式的 JSON OBJECT。                                                                    |
-| `<srid>`    | 要使用的 SRID 的整数值。                                                                                   |
+| `<string>`  | 参数必须是WKT、EWKT、WKB或EWKB格式的十六进制字符串，或GeoJSON格式的字符串。                               |
+| `<binary>`  | 参数必须是WKB或EWKB格式的二进制表达式。                                                                   |
+| `<variant>` | 参数必须是GeoJSON格式的JSON OBJECT。                                                                      |
+| `<srid>`    | 要使用的SRID的整数值。                                                                                    |
 
 ## 返回类型
 
