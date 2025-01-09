@@ -25,48 +25,48 @@ LET result RESULTSET := SELECT * FROM t1;
 
 ### 控制流结构
 
-- **FOR 循环**: 遍历范围或结果集。
+- **FOR 循环**：遍历范围或结果集。
 
-  ```sql title='示例：'
-  FOR i IN 1..10 DO ... END FOR;
-  ```
+    ```sql title='示例：'
+    FOR i IN 1..10 DO ... END FOR;
+    ```
 
-- **WHILE 循环**: 只要指定条件为真，就执行代码块。
+- **WHILE 循环**：只要指定条件为真，就执行代码块。
 
-  ```sql title='示例：'
-  WHILE condition DO ... END WHILE;
-  ```
+    ```sql title='示例：'
+    WHILE condition DO ... END WHILE;
+    ```
 
-- **REPEAT 循环**: 执行代码块，直到满足条件。
+- **REPEAT 循环**：执行代码块，直到满足条件。
 
-  ```sql title='示例：'
-  REPEAT ... UNTIL condition END REPEAT;
-  ```
+    ```sql title='示例：'
+    REPEAT ... UNTIL condition END REPEAT;
+    ```
 
-- **LOOP**: 无限执行代码块，直到遇到 `BREAK` 语句。
+- **LOOP**：无限执行代码块，直到遇到 `BREAK` 语句。
 
-  ```sql title='示例：'
-  LOOP ... END LOOP;
-  ```
+    ```sql title='示例：'
+    LOOP ... END LOOP;
+    ```
 
-- **CASE 语句**: 根据不同的条件执行代码块。
+- **CASE 语句**：根据不同的条件执行代码块。
 
-  ```sql title='示例：'
-  CASE [operand]
-  WHEN condition1 THEN ...
-  WHEN condition2 THEN ...
-  ELSE ...
-  END;
-  ```
+    ```sql title='示例：'
+    CASE [operand]
+    WHEN condition1 THEN ...
+    WHEN condition2 THEN ...
+    ELSE ...
+    END;
+    ```
 
-- **IF 语句**: 根据条件执行代码块。
+- **IF 语句**：根据条件执行代码块。
 
-  ```sql title='示例：'
-  IF condition THEN ...
-  ELSEIF condition THEN ...
-  ELSE ...
-  END IF;
-  ```
+    ```sql title='示例：'
+    IF condition THEN ...
+    ELSEIF condition THEN ...
+    ELSE ...
+    END IF;
+    ```
 
 ### RETURN
 
@@ -104,5 +104,5 @@ $$;
 
 ### 注释
 
-- **单行注释**: `-- 注释`
-- **多行注释**: `/* 注释 */`
+- **单行注释**：`-- 注释`
+- **多行注释**：`/* 注释 */`

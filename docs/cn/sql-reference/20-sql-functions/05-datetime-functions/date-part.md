@@ -4,7 +4,7 @@ title: DATE_PART
 
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新：v1.2.153"/>
+<FunctionDescription description="引入或更新于：v1.2.153"/>
 
 提取日期、时间或时间戳的指定部分。
 
@@ -16,8 +16,8 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 DATE_PART( YEAR | QUARTER | MONTH | WEEK | DAY | HOUR | MINUTE | SECOND | DOW | DOY, <date_or_time_expr> )
 ```
 
-- DOW：星期几。
-- DOY：一年中的第几天。
+- DOW: 星期几。
+- DOY: 一年中的第几天。
 
 ## 返回类型
 

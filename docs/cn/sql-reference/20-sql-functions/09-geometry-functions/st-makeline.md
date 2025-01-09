@@ -3,9 +3,9 @@ title: ST_MAKELINE
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新：v1.2.391"/>
+<FunctionDescription description="引入或更新于：v1.2.391"/>
 
-构造一个表示连接输入的两个GEOMETRY对象中点的线的GEOMETRY对象。
+构造一个 GEOMETRY 对象，表示连接输入的两个 GEOMETRY 对象中的点的线。
 
 ## 语法
 
@@ -21,12 +21,12 @@ ST_MAKELINE(<geometry1>, <geometry2>)
 
 | 参数          | 描述                                                                                                 |
 |---------------|-------------------------------------------------------------------------------------------------------------|
-| `<geometry1>` | 包含要连接点的GEOMETRY对象。该对象必须是Point、MultiPoint或LineString。 |
-| `<geometry2>` | 包含要连接点的GEOMETRY对象。该对象必须是Point、MultiPoint或LineString。 |
+| `<geometry1>` | 包含要连接的点的 GEOMETRY 对象。该对象必须是 Point、MultiPoint 或 LineString。 |
+| `<geometry2>` | 包含要连接的点的 GEOMETRY 对象。该对象必须是 Point、MultiPoint 或 LineString。 |
 
 ## 返回类型
 
-Geometry.
+Geometry。
 
 ## 示例
 

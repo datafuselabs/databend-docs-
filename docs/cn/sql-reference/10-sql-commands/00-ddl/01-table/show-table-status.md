@@ -4,7 +4,7 @@ sidebar_position: 14
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新版本：v1.2.131"/>
+<FunctionDescription description="引入或更新于：v1.2.131"/>
 
 显示数据库中表的状态。状态信息包括表的各种物理大小和时间戳，详见[示例](#examples)。
 
@@ -49,7 +49,7 @@ mytable|FUSE  |      0|          |   5|              |         40|              
 以下示例显示当前数据库中行数大于 100 的表的状态：
 
 :::note
-在使用 SHOW TABLE STATUS 查询时，请注意某些列名（如 "rows"）可能被解释为 SQL 关键字，从而导致错误。为避免此问题，请始终使用反引号将列名括起来，如本示例所示。这样可以确保列名在 SQL 查询中被视为标识符而不是关键字。
+在使用 SHOW TABLE STATUS 查询时，请注意某些列名（如 "rows"）可能被解释为 SQL 关键字，可能导致错误。为避免此问题，请始终用反引号括起列名，如本示例所示。这确保列名在 SQL 查询中被视为标识符而非关键字。
 :::
 
 ```sql

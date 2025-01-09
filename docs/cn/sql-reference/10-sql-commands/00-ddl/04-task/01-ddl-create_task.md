@@ -1,5 +1,5 @@
 ---
-title: CREATE TASK
+title: 创建任务
 sidebar_position: 1
 ---
 
@@ -7,7 +7,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新版本：v1.2.371"/>
 
-CREATE TASK 语句用于定义一个新任务，该任务将按计划或基于任务图（DAG）执行指定的 SQL 语句。
+CREATE TASK 语句用于定义一个新任务，该任务按计划或基于任务图（DAG）执行指定的 SQL 语句。
 
 **注意：** 此功能仅在 Databend Cloud 中开箱即用。
 
@@ -29,26 +29,26 @@ AS
 
 | 参数                                        | 描述                                                                                                                                                                  |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| IF NOT EXISTS                                    | 可选。如果指定，则仅当不存在同名任务时才会创建任务。                                                                     |
+| IF NOT EXISTS                                    | 可选。如果指定，则仅当同名任务不存在时才会创建任务。                                                                     |
 | name                                             | 任务的名称。这是一个必填字段。                                                                                                                             |
 | WAREHOUSE                                        | 可选。指定任务使用的虚拟计算集群。                                                                                                               |
-| SCHEDULE                                         | 可选。定义任务运行的调度计划。可以以分钟为单位指定，或使用 CRON 表达式以及时区。                                    |
+| SCHEDULE                                         | 可选。定义任务运行的计划。可以以分钟为单位指定，或使用 CRON 表达式以及时区。                                    |
 | SUSPEND_TASK_AFTER_NUM_FAILURES                  | 可选。任务在连续失败指定次数后会自动挂起。                                                                           |
 | AFTER                                            | 列出在此任务开始之前必须完成的任务。                                                                                                                  |
 | WHEN boolean_expr                                | 任务运行必须满足的条件。                                                                                                                           |
-| [ERROR_INTEGRATION](../16-notification/index.md) | 可选。用于任务错误通知的通知集成名称，并应用特定的[任务错误负载](./10-task-error-integration-payload.md)。 |
+| [ERROR_INTEGRATION](../16-notification/index.md) | 可选。用于任务错误通知的通知集成的名称，并应用特定的[任务错误负载](./10-task-error-integration-payload.md)。 |
 | COMMENT                                          | 可选。作为任务注释或描述的字符串字面量。                                                                                             |
 | session_parameter                                | 可选。指定任务运行期间使用的会话参数。                                                                                                  |
 | sql                                              | 任务将执行的 SQL 语句，可以是单个语句或脚本。这是一个必填字段。                                                          |
 
 ### 使用说明
 
-- 必须为独立任务或任务 DAG 中的根任务定义调度计划；否则，任务仅在手动使用 EXECUTE TASK 执行时运行。
-- 不能为 DAG 中的子任务指定调度计划。
+- 必须为独立任务或任务 DAG 中的根任务定义计划；否则，任务仅在手动使用 EXECUTE TASK 执行时运行。
+- 不能为 DAG 中的子任务指定计划。
 - 创建任务后，必须执行 ALTER TASK … RESUME，任务才会根据任务定义中指定的参数运行。
-- WHEN 条件仅支持部分 `<boolean_expression>`，任务 WHEN 子句中支持以下内容：
+- 条件表达式仅支持 `<boolean_expression>` 的子集。任务 WHEN 子句中支持以下内容：
 
-  - [STREAM_STATUS](../../../20-sql-functions/17-table-functions/stream-status.md) 可用于 SQL 表达式中的评估。此函数指示指定的流是否包含变更跟踪数据。您可以在当前运行开始之前使用此函数评估指定的流是否包含变更数据。如果结果为 FALSE，则任务不会运行。
+  - [STREAM_STATUS](../../../20-sql-functions/17-table-functions/stream-status.md) 可用于 SQL 表达式中进行评估。此函数指示指定的流是否包含变更跟踪数据。您可以在当前运行开始之前使用此函数评估指定的流是否包含变更数据。如果结果为 FALSE，则任务不会运行。
   - 布尔运算符，如 AND、OR、NOT 等。
   - 数值、字符串和布尔类型之间的转换。
   - 比较运算符，如等于、不等于、大于、小于等。
@@ -66,9 +66,9 @@ AS
   3. **小时** (0-23)
   4. **日期** (1-31)
   5. **月份** (1-12 或 JAN-DEC)
-  6. **星期几** (0-6，其中 0 是周日，或 SUN-SAT)
+  6. **星期几** (0-6，其中 0 是星期日，或 SUN-SAT)
 
- #### Cron 表达式示例：
+ #### 示例 Cron 表达式：
 
 - **每天上午 9:00:00 太平洋时间：**
   - `USING CRON '0 0 9 * * *' 'America/Los_Angeles'`
@@ -91,7 +91,7 @@ AS
 
 - **每个工作日早上 8:30:00：**
   - `USING CRON '0 30 8 * * 1-5' 'UTC'`
-  - 这将在每个工作日（周一到周五）早上 8:30 运行任务。
+  - 这将在每个工作日（周一至周五）早上 8:30 运行任务。
 
 ## 使用示例
 
@@ -99,7 +99,7 @@ AS
 CREATE TASK my_daily_task
  WAREHOUSE = 'compute_wh'
  SCHEDULE = USING CRON '0 0 9 * * *' 'America/Los_Angeles'
- COMMENT = '每日汇总任务'
+ COMMENT = '每日摘要任务'
  AS
  INSERT INTO summary_table SELECT * FROM source_table;
 ```
@@ -115,7 +115,7 @@ AS
 INSERT INTO compaction_test.test VALUES((1));
 ```
 
-此示例创建了一个名为 mytask 的任务，如果它尚不存在。任务分配给 system 计算集群，并计划每 2 分钟运行一次。如果连续失败三次，任务将被挂起。任务执行插入操作到 compaction_test.test 表中。
+此示例创建了一个名为 mytask 的任务（如果它尚不存在）。任务分配给 system 计算集群，并计划每 2 分钟运行一次。如果连续失败三次，任务将被挂起。任务执行插入操作到 compaction_test.test 表中。
 
 ```sql
 CREATE TASK IF NOT EXISTS daily_sales_summary
@@ -125,7 +125,7 @@ FROM sales_data
 GROUP BY sales_date;
 ```
 
-在此示例中，创建了一个名为 daily_sales_summary 的任务，并设置了秒级调度。它计划每 30 秒运行一次。任务使用 'analytics' 计算集群，并通过从 sales_data 表中聚合数据来计算每日销售汇总。
+在此示例中，创建了一个名为 daily_sales_summary 的任务，并设置了秒级调度。它计划每 30 秒运行一次。任务使用 'analytics' 计算集群，并通过聚合 sales_data 表中的数据计算每日销售摘要。
 
 ```sql
 CREATE TASK IF NOT EXISTS process_orders
@@ -148,7 +148,7 @@ WHERE archived_date < DATEADD(HOUR, -24, CURRENT_TIMESTAMP());
 
 ```
 
-在此示例中，创建了一个名为 hourly_data_cleanup 的任务。它使用 maintenance 计算集群，并计划每小时运行一次。任务从 archived_data 表中删除超过 24 小时的数据。任务仅在 change_stream 流包含变更数据时运行。
+在此示例中，创建了一个名为 hourly_data_cleanup 的任务。它使用 maintenance 计算集群，并计划每小时运行一次。任务删除 archived_data 表中超过 24 小时的数据。任务仅在 change_stream 流包含变更数据时运行。
 
 ```sql
 CREATE TASK IF NOT EXISTS mytask

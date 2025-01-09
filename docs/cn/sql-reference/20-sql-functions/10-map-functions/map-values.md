@@ -3,9 +3,9 @@ title: MAP_VALUES
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.429"/>
+<FunctionDescription description="引入或更新于：v1.2.429"/>
 
-返回一个映射中的值。
+返回 map 中的值。
 
 ## 语法
 
@@ -15,9 +15,9 @@ MAP_VALUES( <map> )
 
 ## 参数
 
-| 参数      | 描述         |
-|-----------|--------------|
-| `<map>`   | 输入的映射。 |
+| 参数     | 描述       |
+|----------|------------|
+| `<map>`  | 输入的 map。 |
 
 ## 返回类型
 
@@ -34,3 +34,4 @@ SELECT MAP_VALUES({'a':1,'b':2,'c':3});
 │ [1,2,3]                         │
 └─────────────────────────────────┘
 ```
+{/*examples*/}

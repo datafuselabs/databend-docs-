@@ -3,9 +3,9 @@ title: HISTOGRAM
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.377"/>
+<FunctionDescription description="引入或更新于：v1.2.377"/>
 
-计算数据的分布情况。它使用“等高”分桶策略来生成直方图。该函数的结果返回一个空字符串或Json字符串。
+计算数据的分布。它使用“等高”分桶策略生成直方图。该函数的结果返回一个空值或 Json 字符串。
 
 ## 语法
 
@@ -14,7 +14,7 @@ HISTOGRAM(<expr>)
 HISTOGRAM(<expr> [, max_num_buckets])
 ```
 
-`max_num_buckets` 表示可以使用的最大桶数，默认值为128。
+`max_num_buckets` 表示可以使用的最大桶数，默认值为 128。
 
 例如：
 ```sql
@@ -30,10 +30,10 @@ select histogram(c_id) from histagg;
 
 ## 参数
 
-| 参数              | 描述                                                                                     |
-|-------------------|------------------------------------------------------------------------------------------|
-| `<expr>`          | `<expr>` 的数据类型应该是可排序的。                                                      |
-| `max_num_buckets` | 可选的常量正整数，表示可以使用的最大桶数。                                               |
+| 参数              | 描述                                                                                |
+|-------------------|------------------------------------------------------------------------------------|
+| `<expr>`          | `<expr>` 的数据类型应该是可排序的。                                                |
+| `max_num_buckets` | 可选的常量正整数，表示可以使用的最大桶数。                                          |
 
 ## 返回类型
 
@@ -60,7 +60,7 @@ INSERT INTO histagg VALUES
   (2, 10, 20, 30);
 ```
 
-**查询示例1**
+**查询示例 1**
 ```sql
 SELECT HISTOGRAM(c_int) FROM histagg;
 ```
@@ -110,11 +110,11 @@ SELECT HISTOGRAM(c_int) FROM histagg;
 ]
 ```
 
-字段描述:
+字段描述：
 
 - buckets：所有桶
   - lower：桶的上界
   - upper：桶的下界
   - count：桶中包含的元素数量
-  - pre_sum：前面桶中元素的总数量
+  - pre_sum：前面桶中元素的总数
   - ndv：桶中不同值的数量

@@ -3,7 +3,7 @@ title: SHOW PROCEDURES
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新于：v1.2.637"/>
+<FunctionDescription description="引入或更新版本：v1.2.637"/>
 
 返回系统中所有存储过程的列表。
 

@@ -33,7 +33,7 @@ PRESIGN [ { DOWNLOAD | UPLOAD }] @<stage_name>/.../<file_name> [ EXPIRE = <expir
 
 ## 示例
 
-### 生成并使用用于下载的预签名 URL
+### 生成并使用下载的预签名 URL
 
 此示例生成用于下载 stage `my-stage` 上文件 `books.csv` 的预签名 URL：
 
@@ -46,7 +46,7 @@ PRESIGN @my_stage/books.csv
 +--------+---------+---------------------------------------------------------------------------------+
 ```
 
-此示例与上一个示例功能相同：
+此示例的功能与前一个示例相同：
 
 ```sql
 PRESIGN DOWNLOAD @my_stage/books.csv
@@ -64,7 +64,7 @@ curl <presigned-url> -o books.csv
 PRESIGN @my_stage/books.csv EXPIRE = 7200
 ```
 
-### 生成并使用用于上传的预签名 URL
+### 生成并使用上传的预签名 URL
 
 此示例生成用于将文件上传为 `books.csv` 到 stage `my_stage` 的预签名 URL：
 

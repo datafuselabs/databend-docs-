@@ -4,7 +4,7 @@ sidebar_position: 4
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新于：v1.2.271"/>
+<FunctionDescription description="引入或更新版本：v1.2.271"/>
 
 import EEFeature from '@site/src/components/EEFeature';
 
@@ -17,7 +17,7 @@ import EEFeature from '@site/src/components/EEFeature';
 ## 语法
 
 ```sql
-SHOW VIRTUAL COLUMNS [ LIKE '<模式>' | WHERE <表达式> ] | [ LIMIT <限制> ]
+SHOW VIRTUAL COLUMNS [ LIKE '<pattern>' | WHERE <expr> ] | [ LIMIT <limit> ]
 ```
 
 ## 示例
@@ -26,7 +26,7 @@ SHOW VIRTUAL COLUMNS [ LIKE '<模式>' | WHERE <表达式> ] | [ LIMIT <限制> 
 SHOW VIRTUAL COLUMNS;
 
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│ database │  table │                     虚拟列                     │
+│ database │  table │                     virtual_columns                     │
 ├──────────┼────────┼─────────────────────────────────────────────────────────┤
 │ default  │ test   │ val['name'], val['pricings'][0]['type'], val['tags'][0] │
 └─────────────────────────────────────────────────────────────────────────────┘

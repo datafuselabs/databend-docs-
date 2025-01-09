@@ -3,9 +3,9 @@ title: JSON_ARRAY_DISTINCT
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.644"/>
+<FunctionDescription description="引入或更新于：v1.2.644"/>
 
-从 JSON 数组中移除重复元素，并返回仅包含唯一元素的数组。
+从 JSON 数组中移除重复元素，并返回一个仅包含唯一元素的数组。
 
 ## 语法
 

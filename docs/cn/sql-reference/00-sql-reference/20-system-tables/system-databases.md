@@ -2,9 +2,9 @@
 title: system.databases
 ---
 
-提供系统中所有数据库的元数据，包括它们的目录、名称、唯一ID、所有者和删除时间戳。
+提供系统中所有数据库的元数据，包括它们的目录、名称、唯一ID、所有者以及删除时间戳。
 
-另请参阅: [SHOW DATABASES](../../10-sql-commands/00-ddl/00-database/show-databases.md)
+另请参阅：[SHOW DATABASES](../../10-sql-commands/00-ddl/00-database/show-databases.md)
 
 ```sql title='示例:'
 SELECT * FROM system.databases;
@@ -19,7 +19,7 @@ SELECT * FROM system.databases;
 └─────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-要显示 `system.databases` 的架构，请使用 `DESCRIBE system.databases`:
+要显示 `system.databases` 的表结构，请使用 `DESCRIBE system.databases`：
 
 ```sql
 DESCRIBE system.databases;

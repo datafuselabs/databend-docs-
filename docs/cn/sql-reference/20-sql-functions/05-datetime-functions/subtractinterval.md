@@ -5,7 +5,6 @@ title_includes: subtract_years, subtract_quarters, subtract_months, subtract_day
 ---
 
 从日期或时间戳中减去时间间隔，返回日期或时间戳类型的结果。
-
 ## 语法
 
 ```sql

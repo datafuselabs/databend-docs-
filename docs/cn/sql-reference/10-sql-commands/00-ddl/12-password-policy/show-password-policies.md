@@ -11,7 +11,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 ## 语法
 
 ```sql
-SHOW PASSWORD POLICIES [ LIKE '<pattern>' ]
+SHOW PASSWORD POLICIES [ LIKE '<模式>' ]
 ```
 
 ## 示例

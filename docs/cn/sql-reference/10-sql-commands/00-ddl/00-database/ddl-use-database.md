@@ -1,5 +1,5 @@
 ---
-title: USE DATABASE
+title: 使用数据库
 sidebar_position: 3
 ---
 
@@ -27,7 +27,7 @@ CREATE TABLE table1 (
   name VARCHAR(50)
 );
 
--- 向 "table1" 中插入数据
+-- 向 "table1" 插入数据
 INSERT INTO table1 (id, name) VALUES (1, 'John');
 INSERT INTO table1 (id, name) VALUES (2, 'Alice');
 
@@ -43,7 +43,7 @@ CREATE TABLE table2 (
   city VARCHAR(50)
 );
 
--- 向 "table2" 中插入数据
+-- 向 "table2" 插入数据
 INSERT INTO table2 (id, city) VALUES (1, 'New York');
 INSERT INTO table2 (id, city) VALUES (2, 'London');
 

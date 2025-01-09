@@ -3,7 +3,7 @@ title: JSON_OBJECT_INSERT
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.647"/>
+<FunctionDescription description="引入或更新于：v1.2.647"/>
 
 在 JSON 对象中插入或更新一个键值对。
 
@@ -13,12 +13,12 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 JSON_OBJECT_INSERT(<json_object>, <key>, <value>[, <update_flag>])
 ```
 
-| 参数                | 描述                                                                                                                                                                                                                                          |   |
+| 参数           | 描述                                                                                                                                                                                                                                          |   |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
 | `<json_object>`     | 输入的 JSON 对象。                                                                                                                                                                                                                               |   |
 | `<key>`             | 要插入或更新的键。                                                                                                                                                                                                                   |   |
 | `<value>`           | 要分配给键的值。                                                                                                                                                                                                                      |   |
-| `<update_flag>` | 一个布尔标志，控制是否替换 JSON 对象中已存在的指定键的值。如果为 `true`，函数会替换已存在键的值。如果为 `false`（或省略），如果键已存在，则会报错。 |   |
+| `<update_flag>` | 一个布尔标志，控制如果指定的键已经存在于 JSON 对象中是否替换值。如果为 `true`，则如果键已存在，函数会替换值。如果为 `false`（或省略），则如果键存在，会报错。 |   |
 
 ## 返回类型
 
@@ -50,7 +50,7 @@ SELECT JSON_OBJECT_INSERT('{"a":1,"b":2,"d":4}'::variant, 'a', 10, true);
 └───────────────────────────────────────────────────────────────────┘
 ```
 
-此示例演示了在尝试为现有键 'a' 插入值时，未指定更新标志设置为 `true` 时发生的错误：
+此示例演示了在未指定更新标志设置为 `true` 的情况下，尝试为现有键 'a' 插入值时发生的错误：
 
 ```sql
 SELECT JSON_OBJECT_INSERT('{"a":1,"b":2,"d":4}'::variant, 'a', 10);

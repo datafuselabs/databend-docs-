@@ -1,5 +1,5 @@
 ---
-title: CREATE VIRTUAL COLUMN
+title: 创建虚拟列
 sidebar_position: 1
 ---
 
@@ -9,9 +9,9 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 import EEFeature from '@site/src/components/EEFeature';
 
-<EEFeature featureName='VIRTUAL COLUMN'/>
+<EEFeature featureName='虚拟列'/>
 
-为表创建虚拟列。请注意，虚拟列仅支持 [FUSE Engine](../../../00-sql-reference/30-table-engines/00-fuse.md)，并且专为与 [Variant](../../../00-sql-reference/10-data-types/variant.md) 数据类型兼容而设计。有关列定义，请参阅 [访问 JSON 中的元素](../../../00-sql-reference/10-data-types/variant.md#accessing-elements-in-json)。
+为表创建虚拟列。请注意，虚拟列仅支持 [FUSE 引擎](../../../00-sql-reference/30-table-engines/00-fuse.md)，并且专为与 [Variant](../../../00-sql-reference/10-data-types/variant.md) 数据类型的兼容性而设计。有关列定义，请参阅 [访问 JSON 中的元素](../../../00-sql-reference/10-data-types/variant.md#accessing-elements-in-json)。
 
 请注意，在为已包含 Variant 数据的表创建虚拟列后，需要使用 [REFRESH VIRTUAL COLUMN](refresh-virtual-column.md) 命令刷新虚拟列。
 
@@ -23,7 +23,7 @@ CREATE [ OR REPLACE ] VIRTUAL COLUMN [ IF NOT EXISTS ] ( <virtual_column_1>, <vi
 
 ## 示例
 
-以下示例为名为 'test' 的表创建虚拟列：
+此示例为名为 'test' 的表创建虚拟列：
 
 ```sql
 -- 创建一个名为 'test' 的表，包含 'id' 和 'val' 列，类型为 Variant。

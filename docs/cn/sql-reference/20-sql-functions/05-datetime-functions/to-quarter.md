@@ -4,7 +4,7 @@ title: TO_QUARTER
 
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.153"/>
+<FunctionDescription description="引入或更新于：v1.2.153"/>
 
 从给定的日期或时间戳中提取季度（1、2、3 或 4）。
 

@@ -4,7 +4,7 @@ sidebar_position: 2
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新版本：v1.2.371"/>
+<FunctionDescription description="引入或更新于：v1.2.371"/>
 
 ALTER TASK 语句用于修改现有任务。
 
@@ -28,7 +28,7 @@ ALTER TASK [ IF EXISTS ] <name> SET
 --- 更改任务 SQL
 ALTER TASK [ IF EXISTS ] <name> MODIFY AS <sql>
 
---- 修改 DAG 中的 when 条件和 after 条件
+--- 修改 DAG 中的前置条件和后置条件
 ALTER TASK [ IF EXISTS ] <name> REMOVE AFTER <string> [ , <string> , ... ] | ADD AFTER <string> [ , <string> , ... ]
 --- 允许更改任务执行条件
 ALTER TASK [ IF EXISTS ] <name> MODIFY WHEN <boolean_expr>
@@ -57,7 +57,7 @@ ALTER TASK IF EXISTS mytask SET
   WAREHOUSE = 'new_warehouse'
   SCHEDULE = USING CRON '0 12 * * * *' 'UTC';
 ```
-此示例修改了 mytask 任务，将其计算集群更改为 new_warehouse，并将其计划更新为每天中午 UTC 运行。
+此示例修改了 mytask 任务，将其计算集群更改为 new_warehouse，并将其计划更新为每天中午 UTC 时间运行。
 
 ```sql
 ALTER TASK IF EXISTS mytask MODIFY 
@@ -74,9 +74,9 @@ ALTER TASK mytaskchild MODIFY WHEN STREAM_STATUS('stream3') = False;
 ```sql
 ALTER TASK MyTask1 ADD AFTER 'task2', 'task3';
 ```
-在此示例中，我们向 MyTask1 任务添加了依赖项。它现在将在 'task2' 和 'task3' 成功完成后运行。这在任务的有向无环图（DAG）中创建了依赖关系。
+在此示例中，我们向 MyTask1 任务添加了依赖项。现在，它将在 'task2' 和 'task3' 成功完成后运行。这在任务的有向无环图（DAG）中创建了依赖关系。
 
 ```sql
 ALTER TASK MyTask1 REMOVE AFTER 'task2';
 ```
-在此示例中，我们移除了 MyTask1 任务的特定依赖项。它将不再在 'task2' 之后运行。这在修改任务 DAG 中的依赖关系时非常有用。
+在此示例中，我们移除了 MyTask1 任务的特定依赖项。它将不再在 'task2' 之后运行。这在您想要修改任务在 DAG 中的依赖关系时非常有用。

@@ -2,11 +2,11 @@
 title: APPROX_COUNT_DISTINCT
 ---
 
-使用 [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog) 算法估计数据集中不同值的数量。
+使用 [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog) 算法估算数据集中不同值的数量。
 
-HyperLogLog 算法通过使用少量内存和时间提供唯一元素数量的近似值。在处理大型数据集且可以接受估计结果时，考虑使用此函数。作为对一些准确性的交换，这是一种快速且高效的返回不同计数的方法。
+HyperLogLog 算法通过使用较少的内存和时间来提供唯一元素数量的近似值。在处理可以接受估计结果的大数据集时，考虑使用此函数。以牺牲一些准确性为代价，这是一种快速且高效的返回不同计数的方法。
 
-要获得准确的结果，请使用 [COUNT_DISTINCT](aggregate-count-distinct.md)。更多解释请参见 [示例](#examples)。
+要获得准确的结果，请使用 [COUNT_DISTINCT](aggregate-count-distinct.md)。有关更多解释，请参见 [示例](#examples)。
 
 ## 语法
 
@@ -38,7 +38,7 @@ VALUES (1, 1, 'Login'),
        (7, 1, 'Login');
 ```
 
-**查询示例：估计不同用户ID的数量**
+**查询示例：估算不同用户 ID 的数量**
 ```sql
 SELECT APPROX_COUNT_DISTINCT(user_id) AS approx_distinct_user_count
 FROM user_events;

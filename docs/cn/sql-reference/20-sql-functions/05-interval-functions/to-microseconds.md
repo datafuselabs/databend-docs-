@@ -12,7 +12,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 ## 语法
 
 ```sql
-TO_MICROSECONDS(<microseconds>)
+TO_MICROSECONDS(<微秒数>)
 ```
 
 ## 返回类型

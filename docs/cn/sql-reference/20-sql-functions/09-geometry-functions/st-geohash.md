@@ -3,9 +3,9 @@ title: ST_GEOHASH
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.436"/>
+<FunctionDescription description="引入或更新版本：v1.2.436"/>
 
-返回一个GEOMETRY对象的[geohash](https://en.wikipedia.org/wiki/Geohash)。Geohash是一个简短的base32字符串，用于标识包含世界中某个位置的测地矩形。可选的精度参数指定返回的geohash的`精度`。例如，传递5作为`精度`将返回一个较短的geohash（5个字符长），精度较低。
+返回一个 GEOMETRY 对象的 [geohash](https://en.wikipedia.org/wiki/Geohash)。geohash 是一个简短的 base32 字符串，用于标识包含世界某个位置的测地矩形。可选的精度参数指定返回的 geohash 的 `precision`。例如，传递 5 作为 `precision` 将返回一个较短（5 个字符长）且精度较低的 geohash。
 
 ## 语法
 
@@ -15,10 +15,10 @@ ST_GEOHASH(<geometry> [, <precision>])
 
 ## 参数
 
-| 参数            | 描述                                                                 |
-|-----------------|----------------------------------------------------------------------|
-| `geometry`    | 参数必须是GEOMETRY类型的表达式。                                     |
-| `[precision]` | 可选。指定返回的geohash的精度，默认值为12。                           |
+| 参数         | 描述                                                                 |
+|--------------|----------------------------------------------------------------------|
+| `geometry`   | 该参数必须是一个 GEOMETRY 类型的表达式。                             |
+| `[precision]`| 可选。指定返回的 geohash 的精度，默认为 12。                         |
 
 ## 返回类型
 

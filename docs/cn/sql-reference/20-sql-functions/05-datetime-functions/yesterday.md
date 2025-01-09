@@ -1,5 +1,5 @@
 ---
-title: 昨日
+title: YESTERDAY
 ---
 
 返回昨天的日期，等同于 `today() - 1`。
@@ -12,7 +12,7 @@ YESTERDAY()
 
 ## 返回类型
 
-`DATE`，返回日期格式为“YYYY-MM-DD”。
+`DATE`，返回格式为“YYYY-MM-DD”的日期。
 
 ## 示例
 
@@ -25,3 +25,4 @@ SELECT YESTERDAY(), TODAY()-1;
 │ 2024-05-21  │ 2024-05-21  │
 └───────────────────────────┘
 ```
+{/*examples*/}

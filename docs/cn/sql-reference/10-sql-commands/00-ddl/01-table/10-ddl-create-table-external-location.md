@@ -3,7 +3,7 @@ title: 创建外部表
 sidebar_position: 2
 ---
 
-`CREATE TABLE ... CONNECTION = (...)` 语句用于创建表，并指定一个 S3 兼容的存储桶来存储数据，而不是使用默认的本地存储。
+`CREATE TABLE ... CONNECTION = (...)` 语句用于创建表并指定一个 S3 兼容的存储桶来存储数据，而不是使用默认的本地存储。
 
 然后，fuse 表引擎表将存储在指定的 S3 兼容存储桶中。
 
@@ -55,13 +55,13 @@ CONNECTION = (
 - `s3:GetObject`：允许从存储桶中读取对象。
 - `s3:ListBucket`：允许列出存储桶中的对象。
 - `s3:ListBucketVersions`：允许列出存储桶中的对象版本。
-- `s3:GetObjectVersion`：允许检索特定版本的对象。
+- `s3:GetObjectVersion`：允许检索对象的特定版本。
 
 **可写访问：**
 - `s3:PutObject`：允许将对象写入存储桶。
 - `s3:DeleteObject`：允许从存储桶中删除对象。
 - `s3:AbortMultipartUpload`：允许中止分段上传。
-- `s3:DeleteObjectVersion`：允许删除特定版本的对象。
+- `s3:DeleteObjectVersion`：允许删除对象的特定版本。
 :::
 
 ## 示例
@@ -74,9 +74,9 @@ SET GLOBAL hide_options_in_show_create_table = 0;
 ```
 :::
 
-### 创建带有外部位置的表
+### 创建具有外部位置的表
 
-创建一个表，并将数据存储在外部位置，例如 Amazon S3：
+创建一个表，数据存储在外部位置，例如 Amazon S3：
 
 ```sql
 -- 创建一个名为 `mytable` 的表，并指定数据存储位置为 `s3://testbucket/admin/data/`

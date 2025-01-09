@@ -1,5 +1,5 @@
 ---
-title: 移除 Stage 文件
+title: REMOVE STAGE FILES
 sidebar_position: 5
 ---
 
@@ -7,7 +7,7 @@ sidebar_position: 5
 
 另请参阅：
 
-- [列出 Stage 文件](04-ddl-list-stage.md)：列出 Stage 中的文件。
+- [LIST STAGE FILES](04-ddl-list-stage.md)：列出 Stage 中的文件。
 - [PRESIGN](presign.md)：Databend 推荐使用 Presigned URL 方法将文件上传到 Stage。
 
 ## 语法
@@ -35,7 +35,7 @@ externalStage ::= @<external_stage_name>[/<file>]
 
 ## 示例
 
-以下命令从名为 *playground* 的 Stage 中移除所有文件名匹配模式 *'ontime.*'* 的文件：
+此命令从名为 *playground* 的 Stage 中移除所有文件名匹配模式 *'ontime.*'* 的文件：
 
 ```sql
 REMOVE @playground PATTERN = 'ontime.*'

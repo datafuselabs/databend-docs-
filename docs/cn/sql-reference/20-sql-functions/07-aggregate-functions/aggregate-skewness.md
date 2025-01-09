@@ -20,7 +20,7 @@ SKEWNESS(<expr>)
 
 ## 返回类型
 
-可为空的 Float64。
+可空的 Float64。
 
 ## 示例
 

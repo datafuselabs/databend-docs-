@@ -11,7 +11,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 - `false`：表示流当前不包含任何变更数据捕获记录。
 
 :::note
-结果中的 `true` 值**并不**确保一定存在变更数据捕获记录。其他操作，例如执行表压缩操作，也可能导致 `true` 值，即使实际上没有变更数据捕获记录。
+结果中的 `true`（`has_data`）**并不**确保一定存在变更数据捕获记录。其他操作，例如执行表压缩操作，也可能导致 `true` 值，即使实际上没有变更数据捕获记录。
 :::
 
 ## 语法

@@ -27,8 +27,8 @@ CREATE [ OR REPLACE ] MASKING POLICY [ IF NOT EXISTS ] <policy_name> AS
 | policy_name              	| 要创建的数据脱敏策略的名称。                                                                                          	|
 | arg_name_to_mask       	| 需要脱敏的原始数据参数的名称。                                                                      	|
 | arg_type_to_mask       	| 需要脱敏的原始数据参数的数据类型。                                                                            	|
-| expression_on_arg_name 	| 决定如何处理原始数据以生成脱敏数据的表达式。                                    	|
-| comment                   | 提供有关数据脱敏策略信息或注释的可选说明。                                                          	|
+| expression_on_arg_name 	| 一个表达式，用于确定如何对原始数据进行处理以生成脱敏后的数据。                                    	|
+| comment                   | 可选注释，提供有关数据脱敏策略的信息或备注。                                                          	|
 
 :::note
 确保 *arg_type_to_mask* 与将应用数据脱敏策略的列的数据类型匹配。
@@ -36,10 +36,10 @@ CREATE [ OR REPLACE ] MASKING POLICY [ IF NOT EXISTS ] <policy_name> AS
 
 ## 示例
 
-此示例展示了如何根据用户角色设置数据脱敏策略，以选择性地显示或隐藏敏感数据。
+此示例演示了如何设置一个数据脱敏策略，以根据用户角色选择性地显示或隐藏敏感数据。
 
 ```sql
--- 创建表并插入示例数据
+-- 创建一个表并插入示例数据
 CREATE TABLE user_info (
     id INT,
     email STRING
@@ -48,15 +48,15 @@ CREATE TABLE user_info (
 INSERT INTO user_info (id, email) VALUES (1, 'sue@example.com');
 INSERT INTO user_info (id, email) VALUES (2, 'eric@example.com');
 
--- 创建角色
+-- 创建一个角色
 CREATE ROLE 'MANAGERS';
 GRANT ALL ON *.* TO ROLE 'MANAGERS';
 
--- 创建用户并将角色授予用户
+-- 创建一个用户并将角色授予该用户
 CREATE USER manager_user IDENTIFIED BY 'databend';
 GRANT ROLE 'MANAGERS' TO 'manager_user';
 
--- 创建数据脱敏策略
+-- 创建一个数据脱敏策略
 CREATE MASKING POLICY email_mask
 AS
   (val nullable(string))

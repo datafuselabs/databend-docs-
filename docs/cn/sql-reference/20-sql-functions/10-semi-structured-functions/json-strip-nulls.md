@@ -3,7 +3,7 @@ title: JSON_STRIP_NULLS
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.89"/>
+<FunctionDescription description="引入或更新于：v1.2.89"/>
 
 从 JSON 对象中移除所有值为 null 的属性。
 

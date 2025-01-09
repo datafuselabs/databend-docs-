@@ -3,9 +3,9 @@ title: MAP_CONTAINS_KEY
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.464"/>
+<FunctionDescription description="引入或更新于：v1.2.464"/>
 
-确定指定的MAP是否包含指定的键。
+判断指定的 MAP 是否包含指定的键。
 
 ## 语法
 
@@ -15,10 +15,10 @@ MAP_CONTAINS_KEY( <map>, <key> )
 
 ## 参数
 
-| 参数      | 描述             |
-|-----------|------------------|
-| `<map>`   | 要搜索的MAP。    |
-| `<key>`   | 要查找的键。     |
+| 参数     | 描述             |
+|----------|------------------|
+| `<map>`  | 要搜索的 MAP。   |
+| `<key>`  | 要查找的键。     |
 
 ## 返回类型
 

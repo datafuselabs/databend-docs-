@@ -7,7 +7,7 @@ title_includes: uniq
 
 `count(distinct ...)` 函数用于计算一组值的唯一值数量。
 
-若要从大数据集中以较少的内存和时间获得估计结果，请考虑使用 [APPROX_COUNT_DISTINCT](aggregate-approx-count-distinct.md)。
+为了在内存和时间有限的情况下从大数据集中获得估计结果，可以考虑使用 [APPROX_COUNT_DISTINCT](aggregate-approx-count-distinct.md)。
 
 :::caution
  NULL 值不会被计数。
@@ -22,9 +22,9 @@ UNIQ(<expr>)
 
 ## 参数
 
-| 参数       | 描述                                      |
+| 参数      | 描述                                      |
 |-----------|--------------------------------------------------|
-| `<expr>`  | 任何表达式，参数的大小为 [1, 32] |
+| `<expr>`  | 任何表达式，参数的数量范围为 [1, 32] |
 
 ## 返回类型
 
@@ -49,7 +49,7 @@ VALUES (1, 'Laptop', 'Electronics', 1000),
        (5, 'Table', 'Furniture', 300);
 ```
 
-**查询示例：计算不同类别的数量**
+**查询示例：统计不同类别的数量**
 
 ```sql
 SELECT COUNT(DISTINCT category) AS unique_categories

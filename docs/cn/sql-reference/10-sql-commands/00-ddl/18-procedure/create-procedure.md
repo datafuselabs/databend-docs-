@@ -18,7 +18,7 @@ AS $$
 BEGIN
     <procedure_body>
     RETURN <return_value>;             -- 用于返回单个值
-    -- 或者
+    -- 或
     RETURN TABLE(<select_query>);      -- 用于返回一个表
 END;
 $$;
@@ -35,7 +35,7 @@ $$;
 
 ## 示例
 
-以下示例定义了一个将重量从千克 (kg) 转换为磅 (lb) 的存储过程：
+以下示例定义了一个存储过程，用于将重量从千克（kg）转换为磅（lb）：
 
 ```sql
 CREATE PROCEDURE convert_kg_to_lb(kg DECIMAL(4, 2)) 

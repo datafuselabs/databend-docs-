@@ -3,9 +3,9 @@ title: JSON_PRETTY
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.77"/>
+<FunctionDescription description="引入或更新于：v1.2.77"/>
 
-格式化JSON数据，使其更具可读性和可展示性。它会自动为JSON数据添加缩进、换行和其他格式化内容，以获得更好的视觉呈现。
+格式化 JSON 数据，使其更易读和美观。它会自动为 JSON 数据添加缩进、换行等格式，以便更好地展示。
 
 ## 语法
 

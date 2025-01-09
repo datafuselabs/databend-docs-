@@ -4,13 +4,13 @@ description: 添加时间间隔函数
 title_includes: add_years, add_quarters, add_months, add_days, add_hours, add_minutes, add_seconds
 ---
 
-向日期或时间戳添加时间间隔，返回日期或时间戳类型的结果。
+向日期或时间戳添加一个时间间隔，返回日期或时间戳类型的结果。
 
 ## 语法
 
 ```sql
 ADD_YEARS(<exp0>, <expr1>)
-ADD_QUARTERS(<exp0>, <expr1>)
+ADD_QUARTERs(<exp0>, <expr1>)
 ADD_MONTHS(<exp0>, <expr1>)
 ADD_DAYS(<exp0>, <expr1>)
 ADD_HOURS(<exp0>, <expr1>)

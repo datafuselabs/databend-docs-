@@ -36,7 +36,7 @@ externalStage ::= @<external_stage_name>[/<path>]
 
 ### PATTERN = 'regex_pattern'
 
-一个基于 [PCRE2](https://www.pcre.org/current/doc/html/) 的正则表达式模式字符串，用单引号括起来，指定要匹配的文件名。点击[这里](#loading-data-with-pattern-matching)查看示例。有关 PCRE2 语法，请参见 http://www.pcre.org/current/doc/html/pcre2syntax.html。
+一个基于 [PCRE2](https://www.pcre.org/current/doc/html/) 的正则表达式模式字符串，用单引号括起来，指定要匹配的文件名。点击[这里](#loading-data-with-pattern-matching)查看示例。有关 PCRE2 语法，请参阅 http://www.pcre.org/current/doc/html/pcre2syntax.html。
 
 ## 示例
 

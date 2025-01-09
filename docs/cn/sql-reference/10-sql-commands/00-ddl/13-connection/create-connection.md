@@ -19,7 +19,7 @@ CREATE [ OR REPLACE ] CONNECTION [ IF NOT EXISTS ] <connection_name>
 
 | 参数        | 描述                                                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| STORAGE_TYPE     | 存储服务的类型。可能的值包括：`s3`, `azblob`, `gcs`, `oss`, `cos`, `hdfs`, 和 `webhdfs`.                                      |
+| STORAGE_TYPE     | 存储服务的类型。可能的值包括：`s3`、`azblob`、`gcs`、`oss`、`cos`、`hdfs` 和 `webhdfs`。                                      |
 | storage_params   | 根据存储类型和认证方法的不同而有所变化。详情请参见[连接参数](../../../00-sql-reference/51-connect-parameters.md)。 |
 
 ## 示例

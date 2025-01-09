@@ -3,9 +3,9 @@ title: DATE_ADD
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.641"/>
+<FunctionDescription description="引入或更新于：v1.2.641"/>
 
-将指定的时间间隔添加到 DATE 或 TIMESTAMP 值。
+将指定的时间间隔添加到 DATE 或 TIMESTAMP 值中。
 
 ## 语法
 
@@ -13,11 +13,11 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 DATE_ADD(<unit>, <interval>,  <date_or_time_expr>)
 ```
 
-| 参数                  | 描述                                                                                             |
-|-----------------------|--------------------------------------------------------------------------------------------------|
-| `<unit>`              | 指定时间单位：`YEAR`, `QUARTER`, `MONTH`, `WEEK`, `DAY`, `HOUR`, `MINUTE` 和 `SECOND`。          |
-| `<interval>`          | 要添加的间隔，例如，如果单位是 `DAY`，则为 2 表示 2 天。                                          |
-| `<date_or_time_expr>` | `DATE` 或 `TIMESTAMP` 类型的值。                                                                 |
+| 参数                 | 描述                                                                                        |
+|-----------------------|----------------------------------------------------------------------------------------------------|
+| `<unit>`              | 指定时间单位：`YEAR`、`QUARTER`、`MONTH`、`WEEK`、`DAY`、`HOUR`、`MINUTE` 和 `SECOND`。 |
+| `<interval>`          | 要添加的间隔，例如，如果单位为 `DAY`，则 2 表示 2 天。                                      |
+| `<date_or_time_expr>` | `DATE` 或 `TIMESTAMP` 类型的值。                                                             |
 
 ## 返回类型
 

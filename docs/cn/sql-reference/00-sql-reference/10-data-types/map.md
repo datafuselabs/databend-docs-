@@ -2,7 +2,7 @@
 title: Map
 ---
 
-MAP 数据结构用于存储一组 `Key:Value` 对，并使用 Array(Tuple(key, value)) 的嵌套数据结构来存储数据。它适用于数据类型固定但 `Key` 的值无法完全确定的情况。
+MAP 数据结构用于存储一组 `Key:Value` 对，并使用 Array(Tuple(key, value)) 的嵌套数据结构来存储数据。它适用于数据类型恒定但 `Key` 的值无法完全确定的情况。
 
 ## 理解 Key:Value
 
@@ -22,7 +22,7 @@ SELECT {'k1': 1, 'k2': 2}, map([1, 2], ['v1', 'v2']);
 +-----------------+---------------------------+
 ```
 
-## Map 和 Bloom Filter 索引
+## Map 和布隆过滤器索引
 
 在 Databend Map 中，为某些数据类型的值创建了布隆过滤器索引：`Numeric`、`String`、`Timestamp` 和 `Date`。
 
@@ -67,7 +67,7 @@ WHERE log['ip'] = '205.91.162.141';
 
 ## 示例
 
-**创建一个包含 Map 列的表用于存储网络流量数据**
+**创建一个带有 Map 列的表用于存储网络流量数据**
 
 ```sql
 CREATE TABLE web_traffic_data(

@@ -4,7 +4,7 @@ title: JSON_EXTRACT_PATH_TEXT
 
 通过 `path_name` 从 Json 字符串中提取值。
 如果任一参数为 `NULL`，则返回值为 `String` 或 `NULL`。
-此函数等效于 `to_varchar(GET_PATH(PARSE_JSON(JSON), PATH_NAME))`。
+此函数等同于 `to_varchar(GET_PATH(PARSE_JSON(JSON), PATH_NAME))`。
 
 ## 语法
 
@@ -15,9 +15,9 @@ JSON_EXTRACT_PATH_TEXT( <expr>, <path_name> )
 ## 参数
 
 | 参数          | 描述                                                         |
-|---------------|--------------------------------------------------------------|
-| `<expr>`      | Json 字符串值                                                |
-| `<path_name>` | 由字段名称连接组成的字符串值                                 |
+|---------------|-------------------------------------------------------------|
+| `<expr>`      | Json 字符串值                                               |
+| `<path_name>` | 由字段名连接组成的字符串值                                   |
 
 ## 返回类型
 

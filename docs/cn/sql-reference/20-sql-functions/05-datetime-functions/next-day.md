@@ -4,9 +4,9 @@ title: NEXT_DAY
 
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.655"/>
+<FunctionDescription description="引入或更新于：v1.2.655"/>
 
-返回给定日期或时间戳之后即将到来的指定星期几的日期。
+返回给定日期或时间戳之后的下一个指定星期几的日期。
 
 ## 语法
 
@@ -14,10 +14,10 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 NEXT_DAY(<date_expression>, <target_day>)
 ```
 
-| 参数                | 描述                                                                                                                                                              |
-|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `<date_expression>` | 用于计算指定星期几的下一个日期的 `DATE` 或 `TIMESTAMP` 值。                                                                                 |
-| `<target_day>`      | 要查找下一个日期的目标星期几。接受的值包括 `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`, 和 `sunday`。 |
+| 参数               | 描述                                                                                                                                                              |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `<date_expression>` | 一个 `DATE` 或 `TIMESTAMP` 值，用于计算指定日期的下一次出现。                                                                                 |
+| `<target_day>`      | 要查找的下一个出现的星期几。可接受的值包括 `monday`、`tuesday`、`wednesday`、`thursday`、`friday`、`saturday` 和 `sunday`。 |
 
 ## 返回类型
 

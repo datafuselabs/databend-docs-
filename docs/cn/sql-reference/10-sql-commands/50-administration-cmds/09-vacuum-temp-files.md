@@ -4,7 +4,7 @@ title: VACUUM TEMPORARY FILES
 
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新于：v1.2.348"/>
+<FunctionDescription description="引入或更新版本：v1.2.348"/>
 
 import EEFeature from '@site/src/components/EEFeature';
 
@@ -21,8 +21,8 @@ VACUUM TEMPORARY FILES [ LIMIT <limit> ]
 ```
 
 | 参数    | 描述                                          |
-|---------|-----------------------------------------------|
-| LIMIT   | 要删除的临时文件的最大数量。                   |
+|---------|------------------------------------------------------|
+| LIMIT   | 要删除的临时文件的最大数量。 |
 
 ## 输出
 
@@ -34,7 +34,7 @@ VACUUM TEMPORARY FILES [ LIMIT <limit> ]
 SELECT * FROM system.temp_files;
 ```
 
-```markdown
+```plaintext
 ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 │ 文件类型 │                          文件名                          │ 文件内容长度 │ 文件最后修改时间 │
 ├───────────┼─────────────────────────────────────────────────────────────┼─────────────────────┼─────────────────────────┤
@@ -89,10 +89,11 @@ SELECT * FROM system.temp_files;
 └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
+```markdown
 VACUUM TEMPORARY FILES;
 
 ┌────────┐
-│  文件  │
+│  Files │
 ├────────┤
 │     48 │
 └────────┘

@@ -7,7 +7,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 从暂存的 Parquet 文件中检索包含以下列的全面元数据表：
 
-| 列名                           | 描述                                                    |
+| 列                           | 描述                                                    |
 |----------------------------------|----------------------------------------------------------------|
 | created_by                       | 负责创建 Parquet 文件的实体或来源 |
 | num_columns                      | Parquet 文件中的列数                      |

@@ -2,14 +2,13 @@
 title: JSON_PATH_QUERY_ARRAY
 ---
 
-获取指定 JSON 值的 JSON 路径返回的所有 JSON 项，并将结果包装到一个数组中。
+获取指定 JSON 值中由 JSON 路径返回的所有 JSON 项，并将结果包装成一个数组。
 
 ## 语法
 
 ```sql
 JSON_PATH_QUERY_ARRAY(<variant>, '<path_name>')
 ```
-
 
 ## 返回类型
 
@@ -31,7 +30,7 @@ VALUES ('Laptop', '{"brand": "Dell", "colors": ["Black", "Silver"], "price": 120
        ('Headphones', '{"brand": "Sony", "colors": ["Black", "Blue", "Red"], "price": 150, "features": {"battery": "20h", "bluetooth": "5.0"}}');
 ```
 
-**查询示例：从产品详情中提取所有功能作为数组**
+**查询示例：从产品详情中提取所有特征作为数组**
 
 ```sql
 SELECT

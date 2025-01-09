@@ -21,7 +21,7 @@ Decimal 类型适用于需要精确十进制表示的应用场景，例如财务
 ## 示例
 
 ```sql
--- 创建一个包含 Decimal 数据类型的表。
+-- 创建一个包含 decimal 数据类型的表。
 CREATE TABLE decimal (
     value DECIMAL(36, 18)
 );
@@ -52,7 +52,7 @@ DECIMAL 有一套复杂的精度推断规则。不同的表达式会应用不同
 
 ### 算术运算
 
-- 加法/减法：`DECIMAL(a, b) + DECIMAL(x, y) -> DECIMAL(max(a - b, x - y) + max(b, y) + 1, max(b, y))`，这意味着整数部分和小数部分都使用两个操作数中的较大值。
+- 加法/减法：`DECIMAL(a, b) + DECIMAL(x, y) -> DECIMAL(max(a - b, x - y) + max(b, y) + 1, max(b, y))`，这意味着整数部分和小数部分都使用两个操作数中较大的值。
 
 - 乘法：`DECIMAL(a, b) * DECIMAL(x, y) -> DECIMAL(a + x, b + y)`。
 
@@ -72,8 +72,8 @@ DECIMAL 有一套复杂的精度推断规则。不同的表达式会应用不同
 
 ## 调整结果精度
 
-不同的用户对 Decimal 的精度要求不同。上述规则是 Databend 的默认行为。如果用户有不同的精度要求，可以通过以下方式调整精度：
+不同的用户对 DECIMAL 的精度要求不同。上述规则是 databend 的默认行为。如果用户有不同的精度要求，可以通过以下方式调整精度：
 
 如果预期的结果精度高于默认精度，可以通过调整输入精度来调整结果精度。例如，如果用户希望计算 AVG(col) 得到 DECIMAL(x, y) 作为结果，其中 col 的类型为 DECIMAL(a, b)，可以将表达式重写为 `cast(AVG(col) as Decimal(x, y)` 或 `AVG(col)::Decimal(x, y)`。
 
-需要注意的是，在 Decimal 类型的转换或计算中，如果整数部分溢出，会抛出错误，如果小数部分的精度溢出，则会直接丢弃而不是四舍五入。
+需要注意的是，在 Decimal 类型的转换或计算中，如果整数部分溢出，会抛出错误；如果小数部分的精度溢出，则会直接丢弃，而不是四舍五入。

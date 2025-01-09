@@ -11,19 +11,19 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 ## 语法
 
 ```sql
-CREATE [ OR REPLACE ] PASSWORD POLICY [ IF NOT EXISTS ] <policy_name>
-    [ PASSWORD_MIN_LENGTH = <number> ]
-    [ PASSWORD_MAX_LENGTH = <number> ]
-    [ PASSWORD_MIN_UPPER_CASE_CHARS = <number> ]
-    [ PASSWORD_MIN_LOWER_CASE_CHARS = <number> ]
-    [ PASSWORD_MIN_NUMERIC_CHARS = <number> ]
-    [ PASSWORD_MIN_SPECIAL_CHARS = <number> ]
-    [ PASSWORD_MIN_AGE_DAYS = <number> ]
-    [ PASSWORD_MAX_AGE_DAYS = <number> ]
-    [ PASSWORD_MAX_RETRIES = <number> ]
-    [ PASSWORD_LOCKOUT_TIME_MINS = <number> ]
-    [ PASSWORD_HISTORY = <number> ]
-    [ COMMENT = '<comment>' ]
+CREATE [ OR REPLACE ] PASSWORD POLICY [ IF NOT EXISTS ] <策略名称>
+    [ PASSWORD_MIN_LENGTH = <数字> ]
+    [ PASSWORD_MAX_LENGTH = <数字> ]
+    [ PASSWORD_MIN_UPPER_CASE_CHARS = <数字> ]
+    [ PASSWORD_MIN_LOWER_CASE_CHARS = <数字> ]
+    [ PASSWORD_MIN_NUMERIC_CHARS = <数字> ]
+    [ PASSWORD_MIN_SPECIAL_CHARS = <数字> ]
+    [ PASSWORD_MIN_AGE_DAYS = <数字> ]
+    [ PASSWORD_MAX_AGE_DAYS = <数字> ]
+    [ PASSWORD_MAX_RETRIES = <数字> ]
+    [ PASSWORD_LOCKOUT_TIME_MINS = <数字> ]
+    [ PASSWORD_HISTORY = <数字> ]
+    [ COMMENT = '<注释>' ]
 ```
 
 ### 密码策略属性
@@ -42,11 +42,11 @@ CREATE [ OR REPLACE ] PASSWORD POLICY [ IF NOT EXISTS ] <policy_name>
 | PASSWORD_MAX_AGE_DAYS         | 0   | 999 | 90      | 密码修改前的最大天数（0 表示无限制） |
 | PASSWORD_MAX_RETRIES          | 1   | 10  | 5       | 锁定前的最大密码重试次数                                    |
 | PASSWORD_LOCKOUT_TIME_MINS    | 1   | 999 | 15      | 超过重试次数后的锁定时长（分钟）                               |
-| PASSWORD_HISTORY              | 0   | 24  | 0       | 检查重复的最近密码数量（0 表示无限制）     |
+| PASSWORD_HISTORY              | 0   | 24  | 0       | 检查重复密码的最近密码数量（0 表示无限制）     |
 
 ## 示例
 
-以下示例创建了一个名为 'SecureLogin' 的密码策略，并将密码的最小长度要求设置为 10 个字符：
+此示例创建了一个名为 'SecureLogin' 的密码策略，并将密码的最小长度要求设置为 10 个字符：
 
 ```sql
 CREATE PASSWORD POLICY SecureLogin

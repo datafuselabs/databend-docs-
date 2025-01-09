@@ -4,16 +4,16 @@ title_includes: TRY_JSON_OBJECT_KEEP_NULL
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.402"/>
+<FunctionDescription description="引入或更新于：v1.2.402"/>
 
-创建一个包含键和值的 JSON 对象。
+创建一个包含键值对的 JSON 对象。
 
-- 参数是零个或多个键值对（其中键是字符串，值可以是任何类型）。
-- 如果键为 NULL，则该键值对将从结果对象中省略。但是，如果值为 NULL，则该键值对将被保留。
-- 键必须是互不相同的，并且它们在结果 JSON 中的顺序可能与您指定的顺序不同。
-- `TRY_JSON_OBJECT_KEEP_NULL` 在构建对象时发生错误时返回 NULL 值。
+- 参数为零个或多个键值对（其中键为字符串，值为任意类型）。
+- 如果键为 NULL，则该键值对将从结果对象中省略。然而，如果值为 NULL，则该键值对将被保留。
+- 键必须互不相同，并且它们在结果 JSON 中的顺序可能与您指定的顺序不同。
+- 如果在构建对象时发生错误，`TRY_JSON_OBJECT_KEEP_NULL` 将返回 NULL 值。
 
-另请参阅: [JSON_OBJECT](json-object.md)
+另请参阅：[JSON_OBJECT](json-object.md)
 
 ## 语法
 

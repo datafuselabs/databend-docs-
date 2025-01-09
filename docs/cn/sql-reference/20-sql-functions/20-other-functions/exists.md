@@ -2,12 +2,12 @@
 title: EXISTS
 ---
 
-EXISTS 条件与子查询一起使用，如果子查询返回至少一行，则认为该条件“被满足”。
+exists 条件与子查询结合使用，如果子查询返回至少一行，则认为“满足”条件。
 
 ## 语法
 
 ```sql
-WHERE EXISTS ( <subquery> );
+WHERE EXISTS ( <子查询> );
 ```
 
 ## 示例

@@ -3,7 +3,7 @@ title: TO_MILLISECONDS
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新版本：v1.2.677"/>
+<FunctionDescription description="引入或更新于：v1.2.677"/>
 
 将指定的毫秒数转换为 Interval 类型。
 

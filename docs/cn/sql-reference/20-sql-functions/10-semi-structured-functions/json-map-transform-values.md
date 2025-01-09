@@ -3,9 +3,9 @@ title: JSON_MAP_TRANSFORM_VALUES
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.652"/>
+<FunctionDescription description="引入或更新于：v1.2.652"/>
 
-使用[lambda表达式](../../00-sql-reference/42-lambda-expressions.md)对JSON对象中的每个值应用转换。
+使用 [lambda 表达式](../../00-sql-reference/42-lambda-expressions.md) 对 JSON 对象中的每个值进行转换。
 
 ## 语法
 
@@ -15,11 +15,11 @@ JSON_MAP_TRANSFORM_VALUES(<json_object>, (<key>, <value>) -> <value_transformati
 
 ## 返回类型
 
-返回一个JSON对象，其键与输入的JSON对象相同，但值根据指定的lambda转换进行了修改。
+返回一个 JSON 对象，其键与输入的 JSON 对象相同，但值根据指定的 lambda 转换进行了修改。
 
 ## 示例
 
-此示例将“ - 特别优惠”附加到每个产品描述中：
+此示例为每个产品描述附加 " - Special Offer"：
 
 ```sql
 SELECT JSON_MAP_TRANSFORM_VALUES('{"product1":"laptop", "product2":"phone"}'::VARIANT, (k, v) -> CONCAT(v, ' - Special Offer')) AS promo_descriptions;

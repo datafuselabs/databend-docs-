@@ -2,7 +2,7 @@
 title: CONNECTION_ID
 ---
 
-返回当前连接的连接ID。
+返回当前连接的连接 ID。
 
 ## 语法
 

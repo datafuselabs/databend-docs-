@@ -2,7 +2,7 @@
 title: H3_HEX_RING
 ---
 
-返回距离给定 [H3](https://eng.uber.com/h3/) 索引恰好为网格距离 `k` 的六边形“空心”环。
+返回与给定 [H3](https://eng.uber.com/h3/) 索引相距恰好 `k` 个网格距离的“空心”六边形环。
 
 ## 语法
 

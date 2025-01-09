@@ -3,9 +3,9 @@ title: ST_ASEWKT
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新：v1.2.436"/>
+<FunctionDescription description="引入或更新版本：v1.2.436"/>
 
-将一个 GEOMETRY 对象转换为 [EWKT（扩展已知文本）](https://postgis.net/docs/ST_GeomFromEWKT.html) 格式的表示。
+将 GEOMETRY 对象转换为 [EWKT（扩展的 well-known-text）](https://postgis.net/docs/ST_GeomFromEWKT.html) 格式表示。
 
 ## 语法
 
@@ -15,9 +15,9 @@ ST_ASEWKT(<geometry>)
 
 ## 参数
 
-| 参数         | 描述                                             |
-|--------------|--------------------------------------------------|
-| `<geometry>` | 参数必须是 GEOMETRY 类型的表达式。               |
+| 参数         | 描述                                          |
+|--------------|------------------------------------------------------|
+| `<geometry>` | 该参数必须是一个 GEOMETRY 类型的表达式。 |
 
 ## 返回类型
 

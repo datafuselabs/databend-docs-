@@ -3,9 +3,9 @@ title: IS_BOOLEAN
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.368"/>
+<FunctionDescription description="引入或更新于：v1.2.368"/>
 
-检查输入的 JSON 值是否为布尔值。
+检查输入的 JSON 值是否为布尔类型。
 
 ## 语法
 
@@ -15,7 +15,7 @@ IS_BOOLEAN( <expr> )
 
 ## 返回类型
 
-如果输入的 JSON 值是布尔值，则返回 `true`，否则返回 `false`。
+如果输入的 JSON 值是布尔类型，则返回 `true`，否则返回 `false`。
 
 ## 示例
 

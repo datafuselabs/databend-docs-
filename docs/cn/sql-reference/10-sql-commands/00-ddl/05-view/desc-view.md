@@ -11,7 +11,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 ## 语法
 
 ```sql
-DESC[RIBE] VIEW [<数据库名>.]<视图名>
+DESC[RIBE] VIEW [<database_name>.]<view_name>
 ```
 
 ## 输出

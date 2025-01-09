@@ -11,7 +11,7 @@ import EEFeature from '@site/src/components/EEFeature';
 
 <EEFeature featureName='VACUUM DROP TABLE'/>
 
-VACUUM DROP TABLE 命令通过永久移除已删除表的数据文件来帮助节省存储空间，释放存储空间，并使您能够高效地管理此过程。它提供了可选参数，以针对特定数据库、预览并限制要清理的数据文件数量。要列出数据库的已删除表，请使用 [SHOW DROP TABLES](show-drop-tables.md)。
+VACUUM DROP TABLE 命令通过永久删除已删除表的数据文件来帮助节省存储空间，释放存储空间，并使您能够高效地管理此过程。它提供了可选参数，以针对特定数据库、预览并限制要清理的数据文件数量。要列出数据库的已删除表，请使用 [SHOW DROP TABLES](show-drop-tables.md)。
 
 另请参阅：[VACUUM TABLE](91-vacuum-table.md)
 
@@ -36,7 +36,7 @@ VACUUM DROP TABLE
   VACUUM DROP TABLE;
   ```
 
-- `DRY RUN [SUMMARY]`: 当指定此参数时，数据文件不会被移除；相反，它会返回一个结果，显示如果未指定此参数，哪些数据文件将被移除。请参阅 [输出](#output) 部分中的示例。
+- `DRY RUN [SUMMARY]`: 指定此参数时，数据文件不会被移除；相反，它会返回一个结果，显示如果未指定此参数，哪些数据文件将被移除。请参阅 [输出](#output) 部分中的示例。
 
 - `LIMIT <file_count>`: 此参数可以与 DRY RUN 参数一起使用，也可以单独使用。与 DRY RUN 一起使用时，它限制 `DRY RUN` 结果中显示的数据文件数量。不与 `DRY RUN` 一起使用时，它限制要清理的数据文件数量。
 
@@ -92,15 +92,15 @@ VACUUM DROP TABLE 命令会移除早于 `DATA_RETENTION_TIME_IN_DAYS` 设置的�
 SET GLOBAL DATA_RETENTION_TIME_IN_DAYS = 2;
 ```
 
-`DATA_RETENTION_TIME_IN_DAYS` 默认值为 1 天（24 小时），不同 Databend 版本的最大值如下：
+`DATA_RETENTION_TIME_IN_DAYS` 默认为 1 天（24 小时），其最大值因 Databend 版本而异：
 
-| 版本                     | 默认保留时间    | 最大保留时间    |
-| ------------------------ | --------------- | --------------- |
-| Databend 社区版和企业版  | 1 天（24 小时） | 90 天           |
-| Databend Cloud（基础版） | 1 天（24 小时） | 1 天（24 小时） |
-| Databend Cloud（商业版） | 1 天（24 小时） | 90 天           |
+| 版本                                  | 默认保留时间 | 最大保留时间   |
+| ---------------------------------------- | ----------------- | ---------------- |
+| Databend 社区版和企业版 | 1 天（24 小时）  | 90 天          |
+| Databend Cloud（基础版）                | 1 天（24 小时）  | 1 天（24 小时） |
+| Databend Cloud（商业版）                | 1 天（24 小时）  | 90 天          |
 
-要查看 `DATA_RETENTION_TIME_IN_DAYS` 的当前值：
+要检查 `DATA_RETENTION_TIME_IN_DAYS` 的当前值：
 
 ```sql
 SHOW SETTINGS LIKE 'DATA_RETENTION_TIME_IN_DAYS';

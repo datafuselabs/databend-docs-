@@ -6,7 +6,7 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 
 <FunctionDescription description="引入或更新于：v1.2.677"/>
 
-INTERVAL 数据类型表示一段时间间隔，允许精确操作和存储跨不同单位的时间间隔。
+INTERVAL 数据类型表示时间间隔，允许跨不同单位精确操作和存储时间间隔。
 
 - 接受自然语言格式（例如，'1 year 2 months ago'）或解释为微秒的数值。
 
@@ -48,7 +48,7 @@ INTERVAL 数据类型表示一段时间间隔，允许精确操作和存储跨�
     └───────────────────────────────────────────────────────┘
     ```
 - 处理正负间隔，精度可达微秒。
-- 一个间隔可以与其他间隔相加或相减。
+- 一个间隔可以加到另一个间隔上，或从另一个间隔中减去。
 
     ```sql title='示例：'
     SELECT TO_DAYS(3) + TO_DAYS(1), TO_DAYS(3) - TO_DAYS(1);
@@ -59,7 +59,7 @@ INTERVAL 数据类型表示一段时间间隔，允许精确操作和存储跨�
     │ 4 days                  │ 2 days                  │
     └───────────────────────────────────────────────────┘
     ```
-- 间隔可以与 DATE 和 TIMESTAMP 值相加或相减。
+- 间隔可以加到 DATE 和 TIMESTAMP 值上，或从 DATE 和 TIMESTAMP 值中减去。
 
     ```sql title='示例：'
     SELECT DATE '2024-12-20' + TO_DAYS(2),  DATE '2024-12-20' - TO_DAYS(2);

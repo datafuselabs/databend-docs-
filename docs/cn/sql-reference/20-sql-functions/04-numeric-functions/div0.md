@@ -3,7 +3,7 @@ title: DIV0
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新：v1.2.345"/>
+<FunctionDescription description="引入或更新于：v1.2.345"/>
 
 返回第一个数除以第二个数的商。如果第二个数为0，则返回0。
 

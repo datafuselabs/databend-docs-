@@ -2,7 +2,7 @@
 title: H3_NUM_HEXAGONS
 ---
 
-返回给定分辨率下唯一 [H3](https://eng.uber.com/h3/) 索引的数量。
+返回给定分辨率下唯一的 [H3](https://eng.uber.com/h3/) 索引数量。
 
 ## 语法
 

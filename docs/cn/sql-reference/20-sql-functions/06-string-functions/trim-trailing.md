@@ -4,7 +4,7 @@ title: TRIM_TRAILING
 
 从字符串的末尾（右侧）移除特定字符。
 
-另请参阅: 
+另请参阅：
 
 - [RTRIM](rtrim.md)
 - [TRIM_LEADING](trim-leading.md)
@@ -12,7 +12,7 @@ title: TRIM_TRAILING
 ## 语法
 
 ```sql
-TRIM_TRAILING(<string>, <trim_character>)
+TRIM_TRAILING(<字符串>, <要移除的字符>)
 ```
 
 ## 示例

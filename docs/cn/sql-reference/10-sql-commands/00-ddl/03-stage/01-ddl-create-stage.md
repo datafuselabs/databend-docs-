@@ -4,14 +4,14 @@ sidebar_position: 1
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新版本：v1.2.339"/>
+<FunctionDescription description="引入或更新于：v1.2.339"/>
 
-创建一个内部或外部 Stage。
+创建一个内部或外部 stage。
 
 ## 语法
 
 ```sql
--- 内部 Stage
+-- 内部 stage
 CREATE [ OR REPLACE ] STAGE [ IF NOT EXISTS ] <internal_stage_name>
   [ FILE_FORMAT = (
          FORMAT_NAME = '<your-custom-format>'
@@ -20,7 +20,7 @@ CREATE [ OR REPLACE ] STAGE [ IF NOT EXISTS ] <internal_stage_name>
   [ COPY_OPTIONS = ( copyOptions ) ]
   [ COMMENT = '<string_literal>' ]
 
--- 外部 Stage
+-- 外部 stage
 CREATE STAGE [ IF NOT EXISTS ] <external_stage_name>
     externalStageParams
   [ FILE_FORMAT = (
@@ -38,7 +38,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs groupId="externalstageparams">
 
-<TabItem value="Amazon S3-compatible Storage" label="Amazon S3 兼容存储服务">
+<TabItem value="Amazon S3-compatible Storage" label="Amazon S3 兼容存储">
 
 ```sql
 externalStageParams ::=
@@ -48,14 +48,14 @@ externalStageParams ::=
   )
 ```
 
-有关访问 Amazon S3 兼容存储服务的连接参数，请参见[连接参数](/00-sql-reference/51-connect-parameters.md)。
+有关访问 Amazon S3 兼容存储服务的连接参数，请参阅[连接参数](/00-sql-reference/51-connect-parameters.md)。
 
 :::note
-要在 Amazon S3 上创建外部 Stage，您还可以使用 IAM 用户账户，从而为 Stage 定义细粒度的访问控制，包括指定对特定 S3 存储桶的读取或写入等操作。请参见[示例 3：使用 AWS IAM 用户创建外部 Stage](#example-3-create-external-stage-with-aws-iam-user)。
+要在 Amazon S3 上创建外部 stage，您还可以使用 IAM 用户账户，从而为 stage 定义细粒度的访问控制，包括指定对特定 S3 存储桶的读取或写入等操作。请参阅[示例 3：使用 AWS IAM 用户创建外部 stage](#example-3-create-external-stage-with-aws-iam-user)。
 :::
 </TabItem>
 
-<TabItem value="Azure Blob Storage" label="Azure Blob Storage">
+<TabItem value="Azure Blob Storage" label="Azure Blob 存储">
 
 ```sql
 externalStageParams ::=
@@ -65,10 +65,10 @@ externalStageParams ::=
   )
 ```
 
-有关访问 Azure Blob Storage 的连接参数，请参见[连接参数](/00-sql-reference/51-connect-parameters.md)。
+有关访问 Azure Blob 存储的连接参数，请参阅[连接参数](/00-sql-reference/51-connect-parameters.md)。
 </TabItem>
 
-<TabItem value="Google Cloud Storage" label="Google Cloud Storage">
+<TabItem value="Google Cloud Storage" label="Google 云存储">
 
 ```sql
 externalLocation ::=
@@ -78,7 +78,7 @@ externalLocation ::=
   )
 ```
 
-有关访问 Google Cloud Storage 的连接参数，请参见[连接参数](/00-sql-reference/51-connect-parameters.md)。
+有关访问 Google 云存储的连接参数，请参阅[连接参数](/00-sql-reference/51-connect-parameters.md)。
 </TabItem>
 
 <TabItem value="Alibaba Cloud OSS" label="阿里云 OSS">
@@ -91,7 +91,7 @@ externalLocation ::=
   )
 ```
 
-有关访问阿里云 OSS 的连接参数，请参见[连接参数](/00-sql-reference/51-connect-parameters.md)。
+有关访问阿里云 OSS 的连接参数，请参阅[连接参数](/00-sql-reference/51-connect-parameters.md)。
 </TabItem>
 
 <TabItem value="Tencent Cloud Object Storage" label="腾讯云对象存储">
@@ -104,7 +104,7 @@ externalLocation ::=
   )
 ```
 
-有关访问腾讯云对象存储的连接参数，请参见[连接参数](/00-sql-reference/51-connect-parameters.md)。
+有关访问腾讯云对象存储的连接参数，请参阅[连接参数](/00-sql-reference/51-connect-parameters.md)。
 </TabItem>
 
 <TabItem value="HDFS" label="HDFS">
@@ -117,7 +117,7 @@ externalLocation ::=
   )
 ```
 
-有关访问 HDFS 的连接参数，请参见[连接参数](/00-sql-reference/51-connect-parameters.md)。
+有关访问 HDFS 的连接参数，请参阅[连接参数](/00-sql-reference/51-connect-parameters.md)。
 </TabItem>
 
 <TabItem value="WebHDFS" label="WebHDFS">
@@ -130,7 +130,7 @@ externalLocation ::=
   )
 ```
 
-有关访问 WebHDFS 的连接参数，请参见[连接参数](/00-sql-reference/51-connect-parameters.md)。
+有关访问 WebHDFS 的连接参数，请参阅[连接参数](/00-sql-reference/51-connect-parameters.md)。
 </TabItem>
 
 <TabItem value="Hugging Face" label="Hugging Face">
@@ -143,13 +143,13 @@ externalLocation ::=
   )
 ```
 
-有关访问 Hugging Face 的连接参数，请参见[连接参数](/00-sql-reference/51-connect-parameters.md)。
+有关访问 Hugging Face 的连接参数，请参阅[连接参数](/00-sql-reference/51-connect-parameters.md)。
 </TabItem>
 </Tabs>
 
 ### FILE_FORMAT
 
-有关详细信息，请参见[输入输出文件格式](../../../00-sql-reference/50-file-format-options.md)。
+有关详细信息，请参阅[输入 & 输出文件格式](../../../00-sql-reference/50-file-format-options.md)。
 
 ### copyOptions
 
@@ -159,16 +159,16 @@ copyOptions ::=
   [ PURGE = <bool> ]
 ```
 
-| 参数               | 描述                                                                                                                   | 是否必填 |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------|----------|
-| `SIZE_LIMIT = <num>` | 指定单个 COPY 语句加载数据的最大行数（> 0）。默认值为 `0`                                                             | 可选     |
-| `PURGE = <bool>`     | 如果设置为 True，则在数据成功加载到表后，命令将清除 Stage 中的文件。默认值为 `false`                                   | 可选     |
+| 参数               | 描述                                                                                                                   | 必填 |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------|------|
+| `SIZE_LIMIT = <num>` | 指定每次 COPY 语句加载数据的最大行数（> 0）。默认值为 `0`                                                             | 可选 |
+| `PURGE = <bool>`     | 如果为 true，表示在数据成功加载到表后，将清除 stage 中的文件。默认值为 `false`                                         | 可选 |
 
 ## 示例
 
-### 示例 1：创建内部 Stage
+### 示例 1：创建内部 stage
 
-此示例创建了一个名为 *my_internal_stage* 的内部 Stage：
+此示例创建了一个名为 *my_internal_stage* 的内部 stage：
 
 ```sql
 CREATE STAGE my_internal_stage;
@@ -181,9 +181,9 @@ my_internal_stage|Internal  |StageParams { storage: Fs(StorageFsConfig { root: "
 
 ```
 
-### 示例 2：使用 AWS 访问密钥创建外部 Stage
+### 示例 2：使用 AWS 访问密钥创建外部 stage
 
-此示例在 Amazon S3 上创建了一个名为 *my_s3_stage* 的外部 Stage：
+此示例在 Amazon S3 上创建了一个名为 *my_s3_stage* 的外部 stage：
 
 ```sql
 CREATE STAGE my_s3_stage URL='s3://load/files/' CONNECTION = (ACCESS_KEY_ID = '<your-access-key-id>' SECRET_ACCESS_KEY = '<your-secret-access-key>');
@@ -196,9 +196,9 @@ DESC STAGE my_s3_stage;
 +-------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
 ```
 
-### 示例 3：使用 AWS IAM 用户创建外部 Stage
+### 示例 3：使用 AWS IAM 用户创建外部 stage
 
-此示例使用 AWS Identity and Access Management (IAM) 用户在 Amazon S3 上创建了一个名为 *iam_external_stage* 的外部 Stage。
+此示例使用 AWS Identity and Access Management (IAM) 用户在 Amazon S3 上创建了一个名为 *iam_external_stage* 的外部 stage。
 
 #### 步骤 1：为 S3 存储桶创建访问策略
 
@@ -246,17 +246,17 @@ DESC STAGE my_s3_stage;
 5. 选择 **Third-party service** 作为用例，并勾选下方的复选框以确认创建访问密钥。
 6. 将生成的访问密钥和秘密访问密钥复制并保存到安全的地方。
 
-#### 步骤 3：创建外部 Stage
+#### 步骤 3：创建外部 stage
 
-使用为 IAM 用户 *databend* 生成的访问密钥和秘密访问密钥创建外部 Stage。
+使用为 IAM 用户 *databend* 生成的访问密钥和秘密访问密钥创建外部 stage。
 
 ```sql
 CREATE STAGE iam_external_stage url = 's3://databend-toronto' CONNECTION =(aws_key_id='<your-access-key-id>' aws_secret_key='<your-secret-access-key>' region='us-east-2');
 ```
 
-### 示例 4：在 Cloudflare R2 上创建外部 Stage
+### 示例 4：在 Cloudflare R2 上创建外部 stage
 
-[Cloudflare R2](https://www.cloudflare.com/en-ca/products/r2/) 是 Cloudflare 推出的对象存储服务，完全兼容 Amazon 的 AWS S3 服务。此示例在 Cloudflare R2 上创建了一个名为 *r2_stage* 的外部 Stage。
+[Cloudflare R2](https://www.cloudflare.com/en-ca/products/r2/) 是 Cloudflare 推出的对象存储服务，完全兼容 Amazon 的 AWS S3 服务。此示例在 Cloudflare R2 上创建了一个名为 *r2_stage* 的外部 stage。
 
 #### 步骤 1：创建存储桶
 
@@ -272,11 +272,11 @@ CREATE STAGE iam_external_stage url = 's3://databend-toronto' CONNECTION =(aws_k
 1. 在 **R2** > **Overview** 中点击 **Manage R2 API Tokens**。
 2. 点击 **Create API token** 创建 API 令牌。
 3. 在配置 API 令牌时，选择必要的权限并根据需要设置 **TTL**。
-4. 点击 **Create API Token** 以获取 Access Key ID 和 Secret Access Key。将其复制并保存到安全的地方。
+4. 点击 **Create API Token** 以获取 Access Key ID 和 Secret Access Key。将它们复制并保存到安全的地方。
 
-#### 步骤 3：创建外部 Stage
+#### 步骤 3：创建外部 stage
 
-使用创建的 Access Key ID 和 Secret Access Key 创建名为 *r2_stage* 的外部 Stage。
+使用创建的 Access Key ID 和 Secret Access Key 创建一个名为 *r2_stage* 的外部 stage。
 
 ```sql
 CREATE STAGE r2_stage

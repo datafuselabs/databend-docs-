@@ -3,9 +3,9 @@ title: ST_GEOMETRYFROMWKB
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.395"/>
+<FunctionDescription description="引入或更新版本：v1.2.395"/>
 
-解析一个[WKB(well-known-binary)](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry#Well-known_binary)或[EWKB(extended well-known-binary)](https://postgis.net/docs/ST_GeomFromEWKB.html)输入，并返回一个GEOMETRY类型的值。
+解析 [WKB(well-known-binary)](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry#Well-known_binary) 或 [EWKB(extended well-known-binary)](https://postgis.net/docs/ST_GeomFromEWKB.html) 输入并返回 GEOMETRY 类型的值。
 
 ## 语法
 
@@ -24,13 +24,13 @@ ST_GEOMETRYFROMWKB(<binary>, [<srid>])
 
 | 参数        | 描述                                                                 |
 |-------------|----------------------------------------------------------------------|
-| `<string>`  | 参数必须是一个十六进制格式的WKB或EWKB字符串表达式。                  |
-| `<binary>`  | 参数必须是一个WKB或EWKB格式的二进制表达式。                          |
-| `<srid>`    | 要使用的SRID的整数值。                                               |
+| `<string>`  | 参数必须是 WKB 或 EWKB 格式的十六进制字符串表达式。                   |
+| `<binary>`  | 参数必须是 WKB 或 EWKB 格式的二进制表达式。                           |
+| `<srid>`    | 要使用的 SRID 的整数值。                                              |
 
 ## 返回类型
 
-Geometry.
+Geometry。
 
 ## 示例
 

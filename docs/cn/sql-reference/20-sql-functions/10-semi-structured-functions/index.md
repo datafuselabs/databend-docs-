@@ -2,7 +2,7 @@
 title: 半结构化函数
 ---
 
-本节提供 Databend 中半结构化数据函数的参考信息。
+本节提供了 Databend 中半结构化数据函数的参考信息。
 
 ## JSON 解析、转换与类型检查：
 - [CHECK_JSON](check-json.md)

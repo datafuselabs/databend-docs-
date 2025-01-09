@@ -15,4 +15,4 @@ COMMIT
 
 ## 示例
 
-参见[示例](begin.md#examples)。
+参见 [示例](begin.md#examples)。

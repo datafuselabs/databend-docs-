@@ -2,7 +2,7 @@
 title: CASE
 ---
 
-处理 IF/THEN 逻辑。它由至少一对 `WHEN` 和 `THEN` 语句构成。每个 `CASE` 语句必须以 `END` 关键字结束。`ELSE` 语句是可选的，提供了一种捕获未在 `WHEN` 和 `THEN` 语句中明确指定的值的方法。
+处理 IF/THEN 逻辑。它由至少一对 `WHEN` 和 `THEN` 语句构成。每个 `CASE` 语句必须以 `END` 关键字结束。`ELSE` 语句是可选的，用于捕获未在 `WHEN` 和 `THEN` 语句中明确指定的值。
 
 ## 语法
 
@@ -17,10 +17,10 @@ END AS <column_name>
 
 ## 示例
 
-此示例使用 CASE 语句对员工薪资进行分类，并展示了一个动态分配的列名 "SalaryCategory"：
+此示例使用 CASE 语句对员工工资进行分类，并通过动态分配的列名 "SalaryCategory" 展示详细信息：
 
 ```sql
--- 创建示例表
+-- 创建一个示例表
 CREATE TABLE Employee (
     EmployeeID INT,
     FirstName VARCHAR(50),
@@ -35,17 +35,17 @@ INSERT INTO Employee VALUES (3, 'Bob', 'Johnson', 75000);
 INSERT INTO Employee VALUES (4, 'Alice', 'Williams', 90000);
 
 -- 使用 CASE 语句添加新列 'SalaryCategory'
--- 根据薪资对员工进行分类
+-- 根据员工的工资进行分类
 SELECT
     EmployeeID,
     FirstName,
     LastName,
     Salary,
     CASE
-        WHEN Salary < 60000 THEN 'Low'
-        WHEN Salary >= 60000 AND Salary < 80000 THEN 'Medium'
-        WHEN Salary >= 80000 THEN 'High'
-        ELSE 'Unknown'
+        WHEN Salary < 60000 THEN '低'
+        WHEN Salary >= 60000 AND Salary < 80000 THEN '中'
+        WHEN Salary >= 80000 THEN '高'
+        ELSE '未知'
     END AS SalaryCategory
 FROM
     Employee;
@@ -53,9 +53,9 @@ FROM
 ┌──────────────────────────────────────────────────────────────────────────────────────────┐
 │    employeeid   │     firstname    │     lastname     │      salary     │ salarycategory │
 ├─────────────────┼──────────────────┼──────────────────┼─────────────────┼────────────────┤
-│               1 │ John             │ Doe              │           50000 │ Low            │
-│               2 │ Jane             │ Smith            │           60000 │ Medium         │
-│               4 │ Alice            │ Williams         │           90000 │ High           │
-│               3 │ Bob              │ Johnson          │           75000 │ Medium         │
+│               1 │ John             │ Doe              │           50000 │ 低             │
+│               2 │ Jane             │ Smith            │           60000 │ 中             │
+│               4 │ Alice            │ Williams         │           90000 │ 高             │
+│               3 │ Bob              │ Johnson          │           75000 │ 中             │
 └──────────────────────────────────────────────────────────────────────────────────────────┘
 ```

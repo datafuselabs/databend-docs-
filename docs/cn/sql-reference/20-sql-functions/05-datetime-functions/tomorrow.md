@@ -1,5 +1,5 @@
 ---
-title: 明天
+title: TOMORROW
 ---
 
 返回明天的日期，等同于 `today() + 1`。
@@ -12,7 +12,7 @@ TOMORROW()
 
 ## 返回类型
 
-`DATE`，返回日期格式为“YYYY-MM-DD”。
+`DATE`，返回格式为“YYYY-MM-DD”的日期。
 
 ## 示例
 

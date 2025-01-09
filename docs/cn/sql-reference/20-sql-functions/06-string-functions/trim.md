@@ -3,11 +3,11 @@ title: TRIM
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.659"/>
+<FunctionDescription description="引入或更新于：v1.2.659"/>
 
-从字符串中移除特定的字符或空格，可以选择指定位置（BOTH、LEADING 或 TRAILING）。
+从字符串中移除特定字符或空格，可选择指定位置（BOTH、LEADING 或 TRAILING）。
 
-另请参阅: [TRIM_BOTH](trim-both.md)
+另请参阅：[TRIM_BOTH](trim-both.md)
 
 ## 语法
 
@@ -15,16 +15,16 @@ import FunctionDescription from '@site/src/components/FunctionDescription';
 -- 移除特定字符并指定位置
 TRIM({ BOTH | LEADING | TRAILING } <trim_character> FROM <string>)
 
--- 从两边移除特定字符（默认 BOTH）
+-- 从两侧移除特定字符（默认 BOTH）
 TRIM(<string>, <trim_character>)
 
--- 从两边移除空格
+-- 从两侧移除空格
 TRIM(<string>)
 ```
 
 ## 示例
 
-以下示例从字符串 'xxxdatabendxxx' 中移除前导和尾随的 'xxx'：
+以下示例从字符串 'xxxdatabendxxx' 中移除前导和尾随的字符串 'xxx'：
 
 ```sql
 SELECT TRIM(BOTH 'xxx' FROM 'xxxdatabendxxx'), TRIM('xxxdatabendxxx', 'xxx');
@@ -36,7 +36,7 @@ SELECT TRIM(BOTH 'xxx' FROM 'xxxdatabendxxx'), TRIM('xxxdatabendxxx', 'xxx');
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-以下示例从字符串 'xxxdatabend' 中移除前导的 'xxx'：
+以下示例从字符串 'xxxdatabend' 中移除前导的字符串 'xxx'：
 
 ```sql
 SELECT TRIM(LEADING 'xxx' FROM 'xxxdatabend' );
@@ -48,7 +48,7 @@ SELECT TRIM(LEADING 'xxx' FROM 'xxxdatabend' );
 └────────────────────────────────────────┘
 ```
 
-以下示例从字符串 'databendxxx' 中移除尾随的 'xxx'：
+以下示例从字符串 'databendxxx' 中移除尾随的字符串 'xxx'：
 
 ```sql
 SELECT TRIM(TRAILING 'xxx' FROM 'databendxxx' );

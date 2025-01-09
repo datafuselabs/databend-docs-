@@ -3,9 +3,9 @@ title: LIST_STAGE
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新于：v1.2.32"/>
+<FunctionDescription description="引入或更新版本：v1.2.32"/>
 
-列出 Stage 中的文件。该功能允许您根据文件扩展名过滤 Stage 中的文件，并获取每个文件的详细信息。该函数类似于 DDL 命令 [LIST STAGE FILES](../../10-sql-commands/00-ddl/03-stage/04-ddl-list-stage.md)，但提供了通过 SELECT 语句检索特定文件信息的灵活性，例如文件名、大小、MD5 哈希值、最后修改时间戳和创建者，而不是所有文件信息。
+列出 Stage 中的文件。该函数允许您根据文件扩展名过滤 Stage 中的文件，并获取每个文件的详细信息。该函数类似于 DDL 命令 [LIST STAGE FILES](../../10-sql-commands/00-ddl/03-stage/04-ddl-list-stage.md)，但提供了通过 SELECT 语句检索特定文件信息的灵活性，例如文件名、大小、MD5 哈希值、最后修改时间戳和创建者，而不是所有文件信息。
 
 ## 语法
 

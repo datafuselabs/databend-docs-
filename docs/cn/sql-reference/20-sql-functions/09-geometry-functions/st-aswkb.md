@@ -3,9 +3,9 @@ title: ST_ASWKB
 ---
 import FunctionDescription from '@site/src/components/FunctionDescription';
 
-<FunctionDescription description="引入或更新: v1.2.436"/>
+<FunctionDescription description="引入或更新版本：v1.2.436"/>
 
-将一个 GEOMETRY 对象转换为 [WKB（Well-known Binary）](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry#Well-known_binary) 格式的表示。
+将 GEOMETRY 对象转换为 [WKB（知名二进制）](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry#Well-known_binary) 格式表示。
 
 ## 语法
 
@@ -19,9 +19,9 @@ ST_ASWKB(<geometry>)
 
 ## 参数
 
-| 参数         | 描述                                           |
-|--------------|------------------------------------------------|
-| `<geometry>` | 参数必须是 GEOMETRY 类型的表达式。             |
+| 参数         | 描述                                          |
+|--------------|------------------------------------------------------|
+| `<geometry>` | 该参数必须是 GEOMETRY 类型的表达式。 |
 
 ## 返回类型
 
